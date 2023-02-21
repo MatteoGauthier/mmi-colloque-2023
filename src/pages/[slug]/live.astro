@@ -1,0 +1,24 @@
+---
+import {  getCollection } from "astro:content"
+export async function getStaticPaths() {
+  const topics = await getCollection("topic")
+  console.log(topics)
+  return topics.map((p) => ({
+    params: { slug: p.slug },
+    props: p,
+  }))
+}
+const topic = Astro.props
+console.log(topic)
+---
+
+<div>
+  <pre>
+    
+    {
+      JSON.stringify(topic, null, 2)
+    }
+  </pre>
+
+  <h1>Live</h1>
+</div>
