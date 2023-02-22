@@ -144,3 +144,119 @@ import MainLayout from "../layouts/MainLayout.astro"
   <p>Contactez moi par mail</p>
 </MainLayout>
 ```
+
+## Workflow de contribution
+
+Pour travailler à plusieurs en collaboration sur un projet, il est important de maitriser le workflow de contribution. Pour cela, nous allons utiliser le système de branches de Git ainsi que les Pull Requests sur Github.
+
+### Les étapes de contribution à un projet
+
+1. Récuperer le projet sur votre machine
+2. Créer une nouvelle branche
+3. Effectuer des modifications
+4. Créer un commit avec vos modifications
+5. Envoyez vos modifications vers le repository distant
+6. Créer une pull request sur Github
+7. Faire valider votre pull request par un autre contributeur
+8. Merger votre pull request sur la branch principale
+
+### 1. Récuperer le projet sur votre machine
+
+Pour commencer à développer sur le projet, il faut que vous soyez sur la dernière version du repository git. Pour y parvenir vous pouvez utiliser la commande suivante :
+
+```bash
+# Cette commande récupere les modifications distantes
+git pull origin master
+```
+
+### 2. Créer une nouvelle branche
+
+Pour assurer une bonne organisatio et un intégrité du travail de chacun il est fortement recommandé de créer une nouvelle branch à chaque fois que vous souhaitez ajouter une nouvelle fonctionnalité ou corriger un bug. Pour créer une nouvelle branche vous pouvez utiliser une des deux commandes suivante :
+
+```bash
+# Cette commande crée une nouvelle branche et vous y déplace
+git checkout -b <nom-de-votre-branche>
+```
+
+```bash
+# Cette commande crée une nouvelle branche puis vous y déplace
+git branch <nom-de-votre-branche>
+git checkout <nom-de-votre-branche>
+```
+
+#### Bonne pratiques de nommage de branch
+
+Une bonne pratique est de nommer votre branche en fonction de la modification que vous souhaitez apporter. Voici un exemple d'une bonne notation.
+
+- Je souhaite développer une nouvelle fonctionnalité, alors je créer une branch `feat/contact-page`.
+- Je souhaite corriger un bug sur le footer, alors je créer une branch `fix/footer-missing-contact`.
+- Je souhaite améliorer une partie du code, alors je créer une branch `enhancement/extract-component`.
+
+### 3. Effectuer des modifications
+
+Une fois votre branche créer, vous pouvez commencer à effectuer des modifications sur le projet. À chaque fois que vous passez une étape, pensez à faire un commit avec vos modifications.
+
+### 4. Créer un commit avec vos modifications
+
+Avant de créer un commit verifier les fichiers le status des fichiers que vous venez de modifier, pour cela utiliser la commande suivante :
+
+```bash
+git status
+```
+
+Maintenant vous avez un apperçu des fichiers que vous avez modifié. Les fichiers en rouge sont ceux qui ne seront pas inclus dans votre commit, alors que les fichiers verts seront inclus dans votre commit. Pour passer un fichier du status rouge au status vert, vous pouvez utiliser la commande suivante :
+
+```bash
+git add <nom-du-fichier>
+```
+
+Pour gagner un peu de temps la commande `git add .` ajoute tout les fichiers de votre répertoire courant au commit.
+
+Vous pouvez maintenant générer un commit à partir de vos modifications, pour cela utiliser la commande suivante :
+
+```bash
+git commit -m "<message-de-votre-commit>"
+```
+
+> Il est important d'avoir un message de commit clair et précis sur vos modifications.
+
+Vous pouvez maintenant vérifier le bon déroulement de la commande en verifiant l'historique de votre repository local avec la commande ci dessous :
+
+```bash
+git log
+```
+
+> Pour une version plus simple et lisibile de l'historique de votre repository, vous pouvez utiliser la commande `git log --oneline`.
+
+### 5. Envoyez vos modifications vers le repository distant
+
+Rien de plus simple, il vous suffit d'utiliser la commande suivante :
+
+```bash
+git push origin <nom-de-votre-branche>
+```
+
+### 6. Créer une pull request sur Github
+
+Rendez vous sur repository Github, puis cliquez sur l'onglet `Pull requests` puis sur le bouton `New pull request`.
+
+Choissisez la branch à comparer avec la branch principale, puis cliquez sur le bouton `Create pull request`. (en l'occurence votre branche et la branch `master`)
+
+> Il peut être pertinent d'avoir un nom de pull request explicite afin que vos collabrateurs puissent comprendre rapidement le but de votre pull request.
+
+### 7. Faire valider votre pull request par un autre contributeur
+
+En fonction du sérieux de votre projet, il est possible que vous ayez besoin de faire valider votre pull request par un autre contributeur. Pour cela, vous pouvez ajouter un ou plusieurs contributeurs en tant que `reviewer` de votre pull request.
+
+Cela est fortement recommander car cela permet de vérifier le contenu ajouter à la branch principale. La personne chargé de cette review (validation) devra vérifier plusieurs points :
+
+- La qualité du code
+- La cohérence des modifications
+
+### 8. Merger votre pull request sur la branch principale
+
+Une fois que votre pull request a été validé, vous pouvez merger votre pull request sur la branch principale. Pour cela, il vous suffit de cliquer sur le bouton `Square and merge` puis sur le bouton `Confirm merge`.
+
+## Crédits
+
+- [Astro](https://astro.build/)
