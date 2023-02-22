@@ -1,7 +1,187 @@
 ---
 
 ---
+<style>
+footer{
+    background-color: black;
+    margin: 0px;
+    color: white;
+}
+.footer-a{
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    text-decoration: none;
+}
+.footer-a:hover{
 
-<footer>
-  Footer
-</footer>
+    text-decoration: underline;
+}
+body{
+    margin: 0px;
+}
+
+
+footer .logo{
+    width: 75px;
+    margin-left: 4.5vw;
+    margin-top: 33px;
+}
+footer h3{
+    font-family: 'Hind';
+    font-size: 21px;
+}
+
+.contenu-footer-1{
+    margin-top: 76px ;
+    display: flex;
+    flex-direction: row;
+    margin-left: 4.5vw;
+    width: calc(100vw - 9vw);
+    justify-content: space-between;
+}
+
+.soc-foot{
+    width: 65px;
+    margin-right: 4vw;
+}
+
+.soc-img{
+    display: flex;
+}
+
+.legal-footer{
+    display: flex;
+    margin-left: 4.5vw;
+    width: 19vw;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+    .contenu-footer-1{
+        flex-direction: column;
+        
+    margin-left: 17vw;
+    width: calc(100vw - 34vw);
+    }
+    .legal-footer{
+        margin-left:17vw ;
+        width: calc(100vw - 34vw) ;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .mobile-display-n{
+        display: none;
+    }
+    .contenu-footer-1{
+        justify-content: space-evenly;
+    }
+}
+</style>
+
+  <footer>
+    <img src="images/logo.webp" alt="" class="logo">
+    
+    <div class="contenu-footer-1">
+    <div class="colonne-footer">
+    
+        <div class="bloc-contenu">
+            <h3>Accueil</h3>
+            
+        </div>
+        <div class="bloc-contenu">
+            <h3>Colloques MMI</h3>
+            <a href="" class="footer-a"><p>Edition 2023</p></a>
+            <a href="" class="footer-a"><p>Edition 2022</p></a>
+            
+        </div>
+        <div class="bloc-contenu">
+            <h3>Programme</h3>
+            
+        </div>
+    
+    </div>
+    
+    <div class="colonne-footer mobile-display-n">
+    
+        <div class="bloc-contenu">
+            <h3>PUBLIC</h3>
+            <a href="" class="footer-a"><p>Informations</p></a>
+            <a href="" class="footer-a"><p>Intervenants</p></a>
+            <a href="" class="footer-a"><p>Poster</p></a>
+            <a href="" class="footer-a"><p>Ouvrage</p></a>
+            <a href="" class="footer-a"><p>Live</p></a>
+            
+        </div>
+        <div class="bloc-contenu">
+            <h3>DISPOSITIFS INNOVANTS</h3>
+            <a href="" class="footer-a"><p>Informations</p></a>
+            <a href="" class="footer-a"><p>Intervenants</p></a>
+            <a href="" class="footer-a"><p>Poster</p></a>
+            <a href="" class="footer-a"><p>Ouvrage</p></a>
+            <a href="" class="footer-a"><p>Live</p></a>
+            
+            
+        </div>
+    
+    </div>
+    
+    <div class="colonne-footer mobile-display-n" >
+    
+        <div class="bloc-contenu">
+            <h3>ACCESSIBILITÉ</h3>
+            <a href="" class="footer-a"><p>Informations</p></a>
+            <a href="" class="footer-a"><p>Intervenants</p></a>
+            <a href="" class="footer-a"><p>Poster</p></a>
+            <a href="" class="footer-a"><p>Ouvrage</p></a>
+            <a href="" class="footer-a"><p>Live</p></a>
+            
+        </div>
+        <div class="bloc-contenu">
+            <h3>INCLUSIVITÉ</h3>
+            <a href="" class="footer-a"><p>Informations</p></a>
+            <a href="" class="footer-a"><p>Intervenants</p></a>
+            <a href="" class="footer-a"><p>Poster</p></a>
+            <a href="" class="footer-a"><p>Ouvrage</p></a>
+            <a href="" class="footer-a"><p>Live</p></a>
+            
+            
+        </div>
+    </div>
+    
+    <div class="colonne-footer">
+    
+        <div class="bloc-contenu">
+            <h3>NOUS CONTACTER</h3>
+            <a href="" class="footer-a"><p>1 Rue Jacques Ellul, 33800  BORDEAUX</p></a>
+            <a href="" class="footer-a"><p>05 57 12 20 40</p></a>
+            <a href="" class="footer-a"><p>mmibordeaux@mmibordeaux.com</p></a>
+            <a href="" class="footer-a"><p>colloquemmi@mmibordeaux.com</p></a>
+            
+        </div>
+        <div class="bloc-contenu">
+            <h3>À PROPOS</h3>
+            <a href="" class="footer-a"><p>Les intervenants</p></a>
+            <a href="" class="footer-a"><p>Les élèves MMI</p></a>
+            <a href="" class="footer-a"><p>Les professeurs</p></a>
+            
+            
+        </div>
+        <div class="bloc-contenu-soc">
+            <h3>NOS RÉSEAUX</h3>
+            <div class="soc-img">
+            <a href=""><img src="images/twitch.webp" alt="" class="soc-foot"></a>
+            <a href=""><img src="images/insta.webp" alt="" class="soc-foot"></a>
+        </div>
+            
+        </div>
+    
+    </div>
+    </div>
+    <div class="legal-footer">
+    
+        <a href="" class="footer-a"><p>Mentions légales</p></a>
+        <a href="" class="footer-a"><p>À propos</p></a>
+    </div>
+        </footer>
