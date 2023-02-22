@@ -1,19 +1,21 @@
 ---
-import { CollectionEntry, getCollection } from "astro:content"
-import TopicLayout from "@/layouts/TopicLayout.astro"
+import { CollectionEntry, getCollection } from 'astro:content';
+import TopicLayout from '@/layouts/TopicLayout.astro';
 export async function getStaticPaths() {
-  const topics = await getCollection("topic")
+  const topics = await getCollection('topic');
   return topics.map((p) => ({
     params: { slug: p.slug },
     props: p,
-  }))
+  }));
 }
-const topic = Astro.props as CollectionEntry<"topic">
+const topic = Astro.props as CollectionEntry<'topic'>;
 ---
 
 <TopicLayout name={topic.data.name} topic={topic.slug} currentPage={'info'}>
   <div class="max-w-4xl">
-    <h1 class="text-title font-display font-semibold leading-none">{topic.data.information.title}</h1>
+    <h1 class="text-title font-display font-semibold leading-none">
+      {topic.data.information.title}
+    </h1>
     <p class="mt-7 pb-2 text-xl font-sans leading-tight">
       {topic.data.information.firstContent}
     </p>
