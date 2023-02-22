@@ -15,6 +15,16 @@ const topic = defineCollection({
       url: z.string(),
       title: z.string(),
     }),
+
+    information: z.object({
+      title: z.string(),
+      firstContent: z.string(),
+      stats: z.object({
+        value: z.number(),
+        label: z.string(),
+      }),
+      secondContent: z.string(),
+    }),
   }),
 })
 
