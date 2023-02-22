@@ -31,7 +31,7 @@ Pour démarrer le serveur de développement local, vous pouvez utiliser le scrip
 npm run dev
 ```
 
-Une fois cette commande executée vous pouvez accéder au site à l'adresse suivante : [http://localhost:3000](http://localhost:3000)
+Une fois cette commande exécutée, vous pouvez accéder au site à l'adresse suivante : [http://localhost:3000](http://localhost:3000)
 
 ## Découverte de Astro
 
@@ -77,7 +77,7 @@ Vous pouvez très bien omettre la partie JavaScript et laisser uniquement la par
 
 ### Création d'un composant
 
-Pour créer un composant il vous suffit de créer un fichier `.astro` dans le dossier `src/components/`. Avec ici aussi la même syntaxe que pour les pages.
+Pour créer un composant, il vous suffit de créer un fichier `.astro` dans le dossier `src/components/`. Avec ici aussi la même syntaxe que pour les pages.
 
 > Pour exemple, nous allons créer un composant `UserInfo` qui affichera le nom et l'âge d'une personne.
 
@@ -106,7 +106,7 @@ import UserInfo from "../components/UserInfo.astro"
 <UserInfo name="Martine Bornerie" age="25" />
 ```
 
-### Créaton d'un layout
+### Création d'un layout
 
 Pour créer un layout il vous suffit de créer un fichier `.astro` dans le dossier `src/layouts/`. Avec ici aussi la même syntaxe propre à Astro.
 
@@ -131,7 +131,7 @@ const { siteName } = Astro.props
 </div>
 ```
 
-Maintenant, pour l'utiliser il suffit de l'importer dans une page, comme ceci :
+Maintenant, pour l'utiliser, il suffit de l'importer dans une page, comme ceci :
 
 ```astro
 ---
@@ -147,11 +147,11 @@ import MainLayout from "../layouts/MainLayout.astro"
 
 ## Workflow de contribution
 
-Pour travailler à plusieurs en collaboration sur un projet, il est important de maitriser le workflow de contribution. Pour cela, nous allons utiliser le système de branches de Git ainsi que les Pull Requests sur Github.
+Pour travailler à plusieurs en collaboration sur un projet, il est important de maitriser le workflow de contribution. Pour cela, nous allons utiliser le système de branches de Git ainsi que les Pulls Requests sur Github.
 
 ### Les étapes de contribution à un projet
 
-1. Récuperer le projet sur votre machine
+1. Récupérer le projet sur votre machine
 2. Créer une nouvelle branche
 3. Effectuer des modifications
 4. Créer un commit avec vos modifications
@@ -160,9 +160,9 @@ Pour travailler à plusieurs en collaboration sur un projet, il est important de
 7. Faire valider votre pull request par un autre contributeur
 8. Merger votre pull request sur la branch principale
 
-### 1. Récuperer le projet sur votre machine
+### 1. Récupérer le projet sur votre machine
 
-Pour commencer à développer sur le projet, il faut que vous soyez sur la dernière version du repository git. Pour y parvenir vous pouvez utiliser la commande suivante :
+Pour commencer à développer sur le projet, il faut que vous soyez sur la dernière version du repository git. Pour y parvenir, vous pouvez utiliser la commande suivante :
 
 ```bash
 # Cette commande récupere les modifications distantes
@@ -171,7 +171,7 @@ git pull origin master
 
 ### 2. Créer une nouvelle branche
 
-Pour assurer une bonne organisation et une intégrité du travail de chacun il est fortement recommandé de créer une nouvelle branch à chaque fois que vous souhaitez ajouter une nouvelle fonctionnalité ou corriger un bug. Pour créer une nouvelle branche vous pouvez utiliser une des deux commandes suivante :
+Pour assurer une bonne organisation et une intégrité du travail de chacun, il est fortement recommandé de créer une nouvelle branche à chaque fois que vous souhaitez ajouter une nouvelle fonctionnalité ou corriger un bug. Pour créer une nouvelle branche, vous pouvez utiliser une des deux commandes suivante :
 
 ```bash
 # Cette commande crée une nouvelle branche et vous y déplace
@@ -184,7 +184,7 @@ git branch <nom-de-votre-branche>
 git checkout <nom-de-votre-branche>
 ```
 
-#### Bonne pratiques de nommage de branch
+#### Bonnes pratiques de nommage de branche
 
 Une bonne pratique est de nommer votre branche en fonction de la modification que vous souhaitez apporter. Voici un exemple d'une bonne notation.
 
@@ -198,19 +198,19 @@ Une fois votre branche créer, vous pouvez commencer à effectuer des modificati
 
 ### 4. Créer un commit avec vos modifications
 
-Avant de créer un commit verifier les fichiers le status des fichiers que vous venez de modifier, pour cela utiliser la commande suivante :
+Avant de créer un commit vérifier les fichiers le status des fichiers que vous venez de modifier, pour cela utiliser la commande suivante :
 
 ```bash
 git status
 ```
 
-Maintenant vous avez un apperçu des fichiers que vous avez modifié. Les fichiers en rouge sont ceux qui ne seront pas inclus dans votre commit, alors que les fichiers verts seront inclus dans votre commit. Pour passer un fichier du status rouge au status vert, vous pouvez utiliser la commande suivante :
+Maintenant, vous avez un aperçu des fichiers que vous avez modifiés. Les fichiers en rouge sont ceux qui ne seront pas inclus dans votre commit, alors que les fichiers verts seront inclus dans votre commit. Pour passer un fichier du status rouge au status vert, vous pouvez utiliser la commande suivante :
 
 ```bash
 git add <nom-du-fichier>
 ```
 
-Pour gagner un peu de temps la commande `git add .` ajoute tous les fichiers de votre répertoire courant au commit.
+Pour gagner un peu de temps, la commande `git add .` ajoute tous les fichiers de votre répertoire courant au commit.
 
 Vous pouvez maintenant générer un commit à partir de vos modifications, pour cela utiliser la commande suivante :
 
@@ -220,7 +220,7 @@ git commit -m "<message-de-votre-commit>"
 
 > Il est important d'avoir un message de commit clair et précis sur vos modifications.
 
-Vous pouvez maintenant vérifier le bon déroulement de la commande en verifiant l'historique de votre repository local avec la commande ci dessous :
+Vous pouvez maintenant vérifier le bon déroulement de la commande en vérifiant l'historique de votre repository local avec la commande ci-dessous :
 
 ```bash
 git log
@@ -238,9 +238,9 @@ git push origin <nom-de-votre-branche>
 
 ### 6. Créer une pull request sur Github
 
-Rendez vous sur repository Github, puis cliquez sur l'onglet `Pull requests` puis sur le bouton `New pull request`.
+Rendez-vous sur repository Github, puis cliquez sur l'onglet `Pull requests` puis sur le bouton `New pull request`.
 
-Choissisez la branch à comparer avec la branch principale, puis cliquez sur le bouton `Create pull request`. (en l'occurence votre branche et la branch `master`)
+Choisissez la branche à comparer avec la branche principale, puis cliquez sur le bouton `Create pull request`. (en l'occurrence votre branche et la branche `master`)
 
 > Il peut être pertinent d'avoir un nom de pull request explicite afin que vos collabrateurs puissent comprendre rapidement le but de votre pull request.
 
@@ -248,7 +248,7 @@ Choissisez la branch à comparer avec la branch principale, puis cliquez sur le 
 
 En fonction du sérieux de votre projet, il est possible que vous ayez besoin de faire valider votre pull request par un autre contributeur. Pour cela, vous pouvez ajouter un ou plusieurs contributeurs en tant que `reviewer` de votre pull request.
 
-Cela est fortement recommander car cela permet de vérifier le contenu ajouter à la branch principale. La personne chargé de cette review (validation) devra vérifier plusieurs points :
+Cela est fortement recommandé car cela permet de vérifier le contenu ajouté à la branch principale. La personne chargée de cette review (validation) devra vérifier plusieurs points :
 
 - La qualité du code
 - La cohérence des modifications
