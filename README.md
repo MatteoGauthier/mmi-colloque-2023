@@ -171,7 +171,7 @@ git pull origin master
 
 ### 2. Créer une nouvelle branche
 
-Pour assurer une bonne organisatio et un intégrité du travail de chacun il est fortement recommandé de créer une nouvelle branch à chaque fois que vous souhaitez ajouter une nouvelle fonctionnalité ou corriger un bug. Pour créer une nouvelle branche vous pouvez utiliser une des deux commandes suivante :
+Pour assurer une bonne organisation et une intégrité du travail de chacun il est fortement recommandé de créer une nouvelle branch à chaque fois que vous souhaitez ajouter une nouvelle fonctionnalité ou corriger un bug. Pour créer une nouvelle branche vous pouvez utiliser une des deux commandes suivante :
 
 ```bash
 # Cette commande crée une nouvelle branche et vous y déplace
@@ -210,7 +210,7 @@ Maintenant vous avez un apperçu des fichiers que vous avez modifié. Les fichie
 git add <nom-du-fichier>
 ```
 
-Pour gagner un peu de temps la commande `git add .` ajoute tout les fichiers de votre répertoire courant au commit.
+Pour gagner un peu de temps la commande `git add .` ajoute tous les fichiers de votre répertoire courant au commit.
 
 Vous pouvez maintenant générer un commit à partir de vos modifications, pour cela utiliser la commande suivante :
 
