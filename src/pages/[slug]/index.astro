@@ -12,17 +12,19 @@ const topic = Astro.props as CollectionEntry<"topic">
 ---
 
 <TopicLayout name={topic.data.name} topic={topic.slug}>
-  <h1 class="text-title">{topic.data.information.title}</h1>
-  <p class="mt-7 pb-2">
-    {topic.data.information.firstContent}
-  </p>
-  <div class="bg-red-900">
-    <span class="text-[60px] text-accessibility">
-      {topic.data.information.stats.value}
-    </span>
-    <span> {topic.data.information.stats.label}</span>
+  <div class="flex flex-col ml-16 w-7/12 gap-4 m-10">
+    <h1 class="text-title">{topic.data.information.title}</h1>
+    <p class="mt-7 pb-2">
+      {topic.data.information.firstContent}
+    </p>
+    <div>
+      <span class="text-[60px] text-accessibility">
+        {topic.data.information.stats.value}
+      </span>
+      <span> {topic.data.information.stats.label}</span>
+    </div>
+    <p>
+      {topic.data.information.secondContent}
+    </p>
   </div>
-  <p>
-    {topic.data.information.secondContent}
-  </p>
 </TopicLayout>
