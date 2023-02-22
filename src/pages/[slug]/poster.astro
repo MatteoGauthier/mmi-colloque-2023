@@ -1,26 +1,23 @@
 ---
-import { CollectionEntry, getCollection } from "astro:content";
-import TopicLayout from "@/layouts/TopicLayout.astro";
+import { CollectionEntry, getCollection } from "astro:content"
+import TopicLayout from "@/layouts/TopicLayout.astro"
+import H1 from "@/components/H1.astro"
 export async function getStaticPaths() {
-    const topics = await getCollection("topic");
-    return topics.map((p) => ({
-        params: { slug: p.slug },
-        props: p,
-    }));
+  const topics = await getCollection("topic")
+  return topics.map((p) => ({
+    params: { slug: p.slug },
+    props: p,
+  }))
 }
-const topic = Astro.props as CollectionEntry<"topic">;
+const topic = Astro.props as CollectionEntry<"topic">
 ---
 
-<TopicLayout name={topic.data.name} topic={topic.slug} currentPage="poster">
-    <div class="">
-        <h1 class="text-title font-display font-bold">
-            {topic.data.poster.title}
-        </h1>
-        <p class="text-[20px] mt-7 mb-24 font-sans">
-            {topic.data.poster.firstContent}
-        </p>
-        <div class="img-container w-3/6 rounded-lg">
-            <img class="" src={topic.data.poster.img} alt="" />
-        </div>
-    </div>
+<TopicLayout name={topic.data.name} topic={topic.slug} currentPage={"poster"}>
+  <H1>{topic.data.poster.title}</H1>
+  <p class="text-[20px] mt-7 mb-24">
+    {topic.data.poster.firstContent}
+  </p>
+  <div class="img-container w-3/6 rounded-lg">
+    <img class="" src={topic.data.poster.img} alt="" />
+  </div>
 </TopicLayout>

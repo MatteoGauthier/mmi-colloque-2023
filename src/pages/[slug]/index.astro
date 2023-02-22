@@ -1,6 +1,7 @@
 ---
 import { CollectionEntry, getCollection } from 'astro:content';
 import TopicLayout from '@/layouts/TopicLayout.astro';
+import H1 from '@/components/H1.astro';
 export async function getStaticPaths() {
   const topics = await getCollection('topic');
   return topics.map((p) => ({
@@ -13,9 +14,9 @@ const topic = Astro.props as CollectionEntry<'topic'>;
 
 <TopicLayout name={topic.data.name} topic={topic.slug} currentPage={'info'}>
   <div class="max-w-4xl">
-    <h1 class="text-title font-display font-semibold leading-none">
+    <H1>
       {topic.data.information.title}
-    </h1>
+    </H1>
     <p class="mt-7 pb-2 text-xl font-sans leading-tight">
       {topic.data.information.firstContent}
     </p>
