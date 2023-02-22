@@ -11,40 +11,6 @@ const topic = defineCollection({
       })
     ),
 
-<<<<<<< HEAD
-        speakers: z.array(
-            z.object({
-                name: z.string(),
-            })
-        ),
-
-        live: z.object({
-            url: z.string(),
-            title: z.string(),
-            description: z.string(),
-        }),
-        poster: z.object({
-            title: z.string(),
-            firstContent: z.string(),
-            img: z.string(),
-        }),
-        publication: z.object({
-            title: z.string(),
-            firstContent: z.string(),
-            secondContent: z.string(),
-            thirdContent: z.string(),
-        }),
-
-        information: z.object({
-            title: z.string(),
-            firstContent: z.string(),
-            stats: z.object({
-                value: z.number(),
-                label: z.string(),
-            }),
-            secondContent: z.string(),
-        }),
-=======
     live: z.object({
       url: z.string(),
       title: z.string(),
@@ -59,7 +25,6 @@ const topic = defineCollection({
       firstContent: z.string(),
       secondContent: z.string(),
       thirdContent: z.string(),
->>>>>>> b7227125d8e6e9799e3cacb8eec7d42aa511eb1b
     }),
 
     information: z.object({
