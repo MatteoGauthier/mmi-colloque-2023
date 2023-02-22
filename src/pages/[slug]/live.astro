@@ -1,5 +1,6 @@
 ---
-import {  getCollection } from "astro:content"
+import { getCollection } from "astro:content"
+import TopicLayout from "../../layouts/TopicLayout.astro"
 export async function getStaticPaths() {
   const topics = await getCollection("topic")
   console.log(topics)
@@ -9,16 +10,14 @@ export async function getStaticPaths() {
   }))
 }
 const topic = Astro.props
-console.log(topic)
 ---
 
-<div>
+<TopicLayout name={topic.data.name} topic={topic.slug}>
+  <h1>Live</h1>
   <pre>
     
     {
       JSON.stringify(topic, null, 2)
     }
   </pre>
-
-  <h1>Live</h1>
-</div>
+</TopicLayout>

@@ -1,4 +1,6 @@
 ---
+import Footer from '../components/Footer.astro';
+
 export interface Props {
   name: string
   topic: string
@@ -24,18 +26,18 @@ const { name, topic } = Astro.props
       <nav>
         <ul>
           <li>
-            <a href={`${topic}/live`}>Live</a>
-            <a href={`${topic}/poster`}>Poster</a>
-            <a href={`${topic}/publication`}>Publication</a>
-            <a href={`${topic}/speakers`}>Speakers</a>
+            <a href={`/${topic}/live`}>Live</a>
+            <a href={`/${topic}/poster`}>Poster</a>
+            <a href={`/${topic}/publication`}>Publication</a>
+            <a href={`/${topic}/speakers`}>Speakers</a>
           </li>
         </ul>
       </nav>
     </div>
     <div class="main">
-
       <slot />
     </div>
+    <Footer />
   </body>
 </html>
 
