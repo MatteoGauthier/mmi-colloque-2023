@@ -1,6 +1,6 @@
 ---
 import { CollectionEntry, getCollection } from "astro:content"
-import TopicLayout from "../../layouts/TopicLayout.astro"
+import TopicLayout from "@/layouts/TopicLayout.astro"
 export async function getStaticPaths() {
   const topics = await getCollection("topic")
   console.log(topics)
