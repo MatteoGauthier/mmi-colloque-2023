@@ -1,28 +1,32 @@
 ---
-import { CollectionEntry, getCollection } from "astro:content"
-import TopicLayout from "@/layouts/TopicLayout.astro"
+import { CollectionEntry, getCollection } from 'astro:content';
+import TopicLayout from '@/layouts/TopicLayout.astro';
 export async function getStaticPaths() {
-  const topics = await getCollection("topic")
+  const topics = await getCollection('topic');
   return topics.map((p) => ({
     params: { slug: p.slug },
     props: p,
-  }))
+  }));
 }
-const topic = Astro.props as CollectionEntry<"topic">
+const topic = Astro.props as CollectionEntry<'topic'>;
 ---
 
-<TopicLayout name={topic.data.name} topic={topic.slug}>
-  <h1 class="text-title">{topic.data.information.title}</h1>
-  <p class="mt-7 pb-2">
-    {topic.data.information.firstContent}
-  </p>
-  <div class="bg-red-900">
-    <span class="text-[60px] text-accessibility">
-      {topic.data.information.stats.value}
-    </span>
-    <span> {topic.data.information.stats.label}</span>
+<TopicLayout name={topic.data.name} topic={topic.slug} currentPage={'info'}>
+  <div class="max-w-4xl">
+    <h1 class="text-title font-display font-semibold leading-none">
+      {topic.data.information.title}
+    </h1>
+    <p class="mt-7 pb-2 text-xl font-sans leading-tight">
+      {topic.data.information.firstContent}
+    </p>
+    <div class="mt-9 font-display font-semibold">
+      <span class="text-[60px] text-accessibility">
+        {topic.data.information.stats.value}
+      </span>
+      <span class="text-[40px]"> {topic.data.information.stats.label}</span>
+    </div>
+    <p class="mt-11 font-sans text-xl leading-tight">
+      {topic.data.information.secondContent}
+    </p>
   </div>
-  <p>
-    {topic.data.information.secondContent}
-  </p>
 </TopicLayout>

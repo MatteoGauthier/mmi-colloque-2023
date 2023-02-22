@@ -1,77 +1,79 @@
 ---
-import Footer from "@/components/Footer.astro";
+import Footer from "@/components/Footer.astro"
+import Head from "@/components/Head.astro"
+import RightNavigation from "@/components/RightNavigation.astro"
 
 export interface Props {
-    name: string;
-    topic: string;
+  name: string
+  topic: string
+  currentPage: string
 }
 
-const { name, topic } = Astro.props;
+const { name, topic, currentPage } = Astro.props
+
+const colors = {
+  accessibility: "#FC8833",
+  inclusivity: "#FFE279",
+  public: "#F370E6",
+  device: "#70E3F3",
+}
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Hind"
-        />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Montserrat"
-        />
-        <title>{name} - {"TODO"}</title>
-    </head>
-    <body>
-        <div class="header">
-            <span>
-                Topic : {name}
-            </span>
-            <nav>
-                <ul>
-                    <li>
-                        <a href={`/${topic}/live`}>Live</a>
-                        <a href={`/${topic}/poster`}>Poster</a>
-                        <a href={`/${topic}/publication`}>Publication</a>
-                        <a href={`/${topic}/speakers`}>Speakers</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div class="main ml-14">
-            <slot />
-        </div>
-        <Footer />
-    </body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+    <title>{name} - {"TODO"}</title>
+    <Head />
+  </head>
+  <body>
+    <div class="header">
+      <span>
+        Topic : {name}
+      </span>
+      <nav>
+        <ul>
+          <li>
+            <a href={`/${topic}/live`}>Live</a>
+            <a href={`/${topic}/poster`}>Poster</a>
+            <a href={`/${topic}/publication`}>Publication</a>
+            <a href={`/${topic}/speakers`}>Speakers</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="main ml-14">
+      <slot />
+      <RightNavigation color={colors[topic]} currentPage={currentPage} topic={topic} />
+    </div>
+    <Footer />
 
-<style is:global>
-    :root {
+    
+    <style is:global>
+      :root {
         --accent: 124, 58, 237;
-        --accent-gradient: linear-gradient(
-            45deg,
-            rgb(var(--accent)),
-            #da62c4 30%,
-            white 60%
-        );
-    }
-    html {
+        --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+      }
+      html {
         font-family: system-ui, sans-serif;
         background-color: #f6f6f6;
-    }
-    code {
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-    }
+      }
+      code {
+        font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+          Courier New, monospace;
+      }
 
-    .header {
+      .header {
         background-color: #d6d6d6;
-    }
+      }
 
-    .main {
+      .main {
         background: white;
-    }
-</style>
+      }
+    </style>
+  </body>
+</html>
