@@ -2,6 +2,9 @@
 	"name": "colloque-2023",
 	"type": "module",
 	"version": "0.0.1",
+	"engines": {
+		"node": ">=17.0.0"
+	},
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
