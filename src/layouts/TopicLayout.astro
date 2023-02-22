@@ -46,13 +46,14 @@ const colors = {
         </ul>
       </nav>
     </div>
-    <div class="main ml-14">
-      <slot />
+    <div class="main mx-14 mt-12 flex justify-between">
+      <div class="max-w-4xl">
+        <slot />
+      </div>
       <RightNavigation color={colors[topic]} currentPage={currentPage} topic={topic} />
     </div>
     <Footer />
 
-    
     <style is:global>
       :root {
         --accent: 124, 58, 237;
