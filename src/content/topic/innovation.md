@@ -7,6 +7,7 @@ speakers:
 live:
     url: https://www.youtube.com/watch?v=QH2-TGUlwu4
     title: Dispositifs innovants Live Colloque 2023
+    description: Avec Nom/Prenom, Nom/Prenom...
 information:
     title: Phrase d’accroche pour infos Dispositifs innovants
     firstContent: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
