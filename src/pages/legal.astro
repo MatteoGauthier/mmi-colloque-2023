@@ -1,12 +1,12 @@
 ---
-import AlternativeLayout from "@/layouts/AlternativeLayout.astro"
-import { getEntryBySlug } from "astro:content"
+import AlternativeLayout from "@/layouts/AlternativeLayout.astro";
+import { getEntryBySlug } from "astro:content";
 
-const page = await getEntryBySlug("page", "legal")
+const page = await getEntryBySlug("page", "legal");
 
-const { Content, remarkPluginFrontmatter } = await page.render()
+const { Content, remarkPluginFrontmatter } = await page.render();
 ---
 
 <AlternativeLayout title={remarkPluginFrontmatter.title}>
-  <Content />
+    <Content />
 </AlternativeLayout>

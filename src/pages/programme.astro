@@ -1,0 +1,23 @@
+---
+import AlternativeLayout from "@/layouts/AlternativeLayout.astro";
+import PageLayout from "@/layouts/PageLayout.astro";
+import { getEntryBySlug } from "astro:content";
+
+const page = await getEntryBySlug("page", "programme");
+
+const { Content, remarkPluginFrontmatter } = await page.render();
+console.log(page);
+---
+
+<PageLayout title={remarkPluginFrontmatter.title}>
+    <div class="programme-container flex w-full">
+        <div class="infos w-3/6">
+            <h3>{page.data.programme.edition}</h3>
+            <h1>{page.data.programme.title}</h1>
+            <p>{page.data.programme.firstContent}</p>
+        </div>
+        <div class="programme w-1/2">
+            <h2 class="text-center">{page.data.programme.titleRight}</h2>
+        </div>
+    </div>
+</PageLayout>
