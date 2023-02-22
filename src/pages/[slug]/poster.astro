@@ -1,0 +1,26 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+import TopicLayout from "@/layouts/TopicLayout.astro";
+export async function getStaticPaths() {
+    const topics = await getCollection("topic");
+    return topics.map((p) => ({
+        params: { slug: p.slug },
+        props: p,
+    }));
+}
+const topic = Astro.props as CollectionEntry<"topic">;
+---
+
+<TopicLayout name={topic.data.name} topic={topic.slug}>
+    <div class="">
+        <h1 class="text-title font-display font-bold">
+            {topic.data.poster.title}
+        </h1>
+        <p class="text-[20px] mt-7 mb-24 font-sans">
+            {topic.data.poster.firstContent}
+        </p>
+        <div class="img-container w-3/6 rounded-lg">
+            <img class="" src={topic.data.poster.img} alt="" />
+        </div>
+    </div>
+</TopicLayout>

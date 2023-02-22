@@ -1,67 +1,77 @@
 ---
-import Footer from '@/components/Footer.astro';
+import Footer from "@/components/Footer.astro";
 
 export interface Props {
-  name: string
-  topic: string
+    name: string;
+    topic: string;
 }
 
-const { name, topic } = Astro.props
+const { name, topic } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <title>{name} - {"TODO"}</title>
-  </head>
-  <body>
-    <div class="header">
-      <span>
-        Topic : {name}
-      </span>
-
-      <nav>
-        <ul>
-          <li>
-            <a href={`/${topic}/live`}>Live</a>
-            <a href={`/${topic}/poster`}>Poster</a>
-            <a href={`/${topic}/publication`}>Publication</a>
-            <a href={`/${topic}/speakers`}>Speakers</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="main">
-      <slot />
-    </div>
-    <Footer />
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Hind"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+        />
+        <title>{name} - {"TODO"}</title>
+    </head>
+    <body>
+        <div class="header">
+            <span>
+                Topic : {name}
+            </span>
+            <nav>
+                <ul>
+                    <li>
+                        <a href={`/${topic}/live`}>Live</a>
+                        <a href={`/${topic}/poster`}>Poster</a>
+                        <a href={`/${topic}/publication`}>Publication</a>
+                        <a href={`/${topic}/speakers`}>Speakers</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main ml-14">
+            <slot />
+        </div>
+        <Footer />
+    </body>
 </html>
 
 <style is:global>
-  :root {
-    --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background-color: #f6f6f6;
-  }
-  code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
-      monospace;
-  }
+    :root {
+        --accent: 124, 58, 237;
+        --accent-gradient: linear-gradient(
+            45deg,
+            rgb(var(--accent)),
+            #da62c4 30%,
+            white 60%
+        );
+    }
+    html {
+        font-family: system-ui, sans-serif;
+        background-color: #f6f6f6;
+    }
+    code {
+        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+    }
 
-  .header {
-    background-color: #d6d6d6;
-  }
+    .header {
+        background-color: #d6d6d6;
+    }
 
-  .main {
-    background: white;
-  }
+    .main {
+        background: white;
+    }
 </style>
