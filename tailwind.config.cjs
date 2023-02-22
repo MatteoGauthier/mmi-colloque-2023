@@ -8,6 +8,9 @@ module.exports = {
       },
       colors: {
         accessibility: "#FC8833",
+        system: "#70E3F3",
+        public: "#F370E6",
+        inclusivity: "#FFE279",
       },
     },
   },
