@@ -11,7 +11,7 @@ export async function getStaticPaths() {
 const topic = Astro.props as CollectionEntry<"topic">;
 ---
 
-<TopicLayout name={topic.data.name} topic={topic.slug}>
+<TopicLayout name={topic.data.name} topic={topic.slug} currentPage={'poster'}>
     <div class="ml-14">
         <h1 class="text-title">{topic.data.poster.title}</h1>
         <p class="text-[20px] mt-7 mb-24">
