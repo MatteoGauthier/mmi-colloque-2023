@@ -1,6 +1,7 @@
 ---
-import { getCollection } from "astro:content"
-import TopicLayout from "@/layouts/TopicLayout.astro"
+import { getCollection } from 'astro:content';
+import TopicLayout from '@/layouts/TopicLayout.astro';
+import H1 from '@/components/H1.astro';
 export async function getStaticPaths() {
   const topics = await getCollection("topic")
   return topics.map((p) => ({
@@ -11,8 +12,8 @@ export async function getStaticPaths() {
 const topic = Astro.props
 ---
 
-<TopicLayout name={topic.data.name} topic={topic.slug}>
-  <h1>Live</h1>
+<TopicLayout name={topic.data.name} topic={topic.slug} currentPage={'live'}>
+  <H1>Live</H1>
   <pre>
     
     {
