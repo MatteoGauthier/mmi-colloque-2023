@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme")
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -8,6 +10,10 @@ module.exports = {
       },
       colors: {
         accessibility: "#FC8833",
+      },
+      fontFamily: {
+        display: ["Hind", ...defaultTheme.fontFamily.sans],
+        sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
       },
     },
   },
