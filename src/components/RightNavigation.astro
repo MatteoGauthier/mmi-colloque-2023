@@ -1,0 +1,61 @@
+---
+export interface Props {
+  color: string
+  currentPage: string
+  topic: string
+}
+
+import clsx from "clsx"
+
+const { color, currentPage, topic } = Astro.props
+
+const links = [
+  {
+    name: "Informations",
+    page: "info",
+  },
+  {
+    name: "Intervenants",
+    page: "speakers",
+  },
+  {
+    name: "Ouvrage",
+    page: "publication",
+  },
+  {
+    name: "Poster",
+    page: "poster",
+  },
+  {
+    name: "Live",
+    page: "live",
+  },
+]
+
+---
+
+<div class="flex flex-col w-56 space-y-8">
+  {
+    links.map((n) => (
+      <a
+        href={n.page}
+        class={clsx(
+          "item font-semibold text-center flex items-center rounded-[10px] border-black border-2 font-display justify-center py-3 text-[25px] uppercase",
+          currentPage == n.page && "active"
+        )}
+      >
+        {n.name}
+      </a>
+    ))
+  }
+</div>
+
+<style define:vars={{ activeColor: color }}>
+  .item {
+    box-shadow: 0px 4px 4px 0px #00000040;
+  }
+
+  .active {
+    background-color: var(--activeColor);
+  }
+</style>

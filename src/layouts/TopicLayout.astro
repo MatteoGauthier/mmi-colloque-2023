@@ -1,13 +1,22 @@
 ---
 import Footer from "@/components/Footer.astro"
 import Head from "@/components/Head.astro"
+import RightNavigation from "@/components/RightNavigation.astro"
 
 export interface Props {
   name: string
   topic: string
+  currentPage: string
 }
 
-const { name, topic } = Astro.props
+const { name, topic, currentPage } = Astro.props
+
+const colors = {
+  accessibility: "#FC8833",
+  inclusivity: "#FFE279",
+  public: "#F370E6",
+  device: "#70E3F3",
+}
 ---
 
 <!DOCTYPE html>
@@ -38,6 +47,7 @@ const { name, topic } = Astro.props
     </div>
     <div class="main">
       <slot />
+      <RightNavigation color={colors[topic]} currentPage={currentPage} topic={topic} />
     </div>
     <Footer />
   </body><style is:global>
