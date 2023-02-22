@@ -18,16 +18,19 @@ const { title, backgroundImage } = Astro.props
     <title>{title}</title>
     <Head />
   </head>
-  <body>
+  <body
+    style={{
+      backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined,
+    }}
+  >
     <main class="mx-14">
       <h1>{title}</h1>
       <article class="prose max-w-screen-2xl">
         <slot />
       </article>
     </main>
-    <style define:vars={{ backgroundImage: backgroundImage }}>
+    <style define:vars={{ backgroundImage }}>
       body {
-        background-image: url(--backgroundImage);
         background-repeat: no-repeat;
         background-position: left bottom;
         background-attachment: fixed;
