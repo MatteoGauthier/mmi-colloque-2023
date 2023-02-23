@@ -1,13 +1,11 @@
 ---
 import Header from '@/components/Header.astro'
-import AlternativeLayout from '@/layouts/AlternativeLayout.astro'
 import PageLayout from '@/layouts/PageLayout.astro'
-import { getEntryBySlug } from 'astro:content'
 const [page] = await Astro.glob('../content/page/colloques.md')
-const { Content, frontmatter } = page
+const { frontmatter } = page
 ---
 
-<PageLayout backgroundImage={'/icons/loupe.svg'}>
+<PageLayout title="Colloque MMI" backgroundImage={'/icons/loupe.svg'}>
   <div class="colloques-container flex w-full h-screen">
     <div class="infos w-3/6">
       <Header />
