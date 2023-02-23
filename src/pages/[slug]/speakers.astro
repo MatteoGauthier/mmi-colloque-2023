@@ -13,9 +13,60 @@ const topic = Astro.props
 ---
 
 <TopicLayout name={topic.data.name} topic={topic.slug} currentPage={"speakers"}>
-  <H1>Speakers</H1>
+
+  <!-- todo: changer la couleur du orange -->
+  <div class="flex">
+
+    <div class="bg-orange-500 w-[200px] h-[200px] rounded-[20px] border-[3px] border-black flex justify-center items-center p-[20px] mr-[50px] ml-[145px] mb-[60px]">
+      <div class="bg-white w-full h-full rounded-[10px] border-[2px] border-black overflow-hidden flex justify-center items-center"></div>
+    </div>
+
+    <div class="h-auto flex flex-col">
+      <h2 class="text-[50px]">NOM Prénom</h2>
+      <p class="text-[30px]">profession de l'invité</p>
+    </div>
+
+  </div>
+  <div class="flex">
+
+    <div class="bg-orange-500 w-[200px] h-[200px] rounded-[20px] border-[3px] border-black flex justify-center items-center p-[20px] mr-[50px] ml-[145px] mb-[60px]">
+      <div class="bg-white w-full h-full rounded-[10px] border-[2px] border-black overflow-hidden flex justify-center items-center"></div>
+    </div>
+
+    <div class="h-auto flex flex-col">
+      <h2 class="text-[50px]">NOM Prénom</h2>
+      <p class="text-[30px]">profession de l'invité</p>
+    </div>
+
+  </div>
+  <div class="flex">
+
+    <div class="bg-orange-500 w-[200px] h-[200px] rounded-[20px] border-[3px] border-black flex justify-center items-center p-[20px] mr-[50px] ml-[145px] mb-[60px]">
+      <div class="bg-white w-full h-full rounded-[10px] border-[2px] border-black overflow-hidden flex justify-center items-center"></div>
+    </div>
+
+    <div class="h-auto flex flex-col">
+      <h2 class="text-[50px]">NOM Prénom</h2>
+      <p class="text-[30px]">profession de l'invité</p>
+    </div>
+
+  </div>
+  <div class="flex">
+
+    <div class="bg-orange-500 w-[200px] h-[200px] rounded-[20px] border-[3px] border-black flex justify-center items-center p-[20px] mr-[50px] ml-[145px] mb-[60px]">
+      <div class="bg-white w-full h-full rounded-[10px] border-[2px] border-black overflow-hidden flex justify-center items-center"></div>
+    </div>
+
+    <div class="h-auto flex flex-col">
+      <h2 class="text-[50px]">NOM Prénom</h2>
+      <p class="text-[30px]">profession de l'invité</p>
+    </div>
+
+  </div>
+
+
+
   <pre>
-    
     {
       JSON.stringify(topic, null, 2)
     }
