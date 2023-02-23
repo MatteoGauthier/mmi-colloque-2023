@@ -1,60 +1,92 @@
 ---
 export interface Props {
-    name: string;
+  name: string
+  topic: string
+  currentPage: string
 }
 
-const { name } = Astro.props;
-import RightNavigation from "@/components/RightNavigation.astro";
+const { name, topic, currentPage } = Astro.props
+
+import RightNavigation from '@/components/RightNavigation.astro'
+import { colors } from 'src/lib/content'
 ---
 
 <style>
-    .band {
-        right: 0;
-        display: flex;
-        justify-content: end;
-    }
-    .band-img-box {
-        width: 844px;
-        position: relative;
-    }
-    .band-img-box .top-img , .norm-txt{
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 50px;
-        font-family: "Hind";
-        font-weight: bold;
-        width: 500px;
-        text-align: center;
-    }
-    .band-img-m, .mobile-txt, .top-img{
-        display: none;
-    }
-    @media screen and (max-width: 768px) {
+  .band {
+    right: 0;
+    display: flex;
+    justify-content: end;
+  }
+  .band-img-box {
+    width: 844px;
+    position: relative;
+  }
+  
+  .norm-txt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-family: 'Hind';
+    font-weight: bold;
+    width: 500px;
+    text-align: center;
+  }
+  .band-img-box .top-img{
+    position: absolute;
+    left: 50%;
+    top: 400px;
+    transform: translate(-50%,0);
+    font-size: 50px;
+    font-family: 'Hind';
+    font-weight: bold;
+    width: 500px;
+    text-align: center;
 
-        .band-img-m{
-        display: inline-block;
-        width: 100vw;
+  }
+  .band-img-m,
+  .mobile-txt,
+  .top-img {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    .band-img-m {
+      display: inline-block;
+      width: 100vw;
+      min-height: 1040px;
+      object-fit: cover;
     }
-    .mobile-txt, .top-img{
-        display: block;
+    .mobile-txt,
+    .top-img {
+      display: block;
     }
+.mobile-txt{
+    
+    margin-bottom: 75px;
+    transform: translate(0, -150px);
+}
+    .band-img,
+    .norm-txt {
+      display: none;
+    }
+  }
 
-    .band-img, .norm-txt {
-        display: none;
-    }
-    }
 </style>
 
 <div class="band">
-    <div class="band-img-box">
-        <img src=`../public/images/Inclusivitém.webp` alt="" class="band-img-m" />
-        <img src=`../public/images/Inclusivité.webp` alt="" class="band-img" />
-        
-        <h1 class="norm-txt">Inclusivité</h1>
-        <div class="top-img">
-            <h1 class="mobile-txt">Inclusivité</h1>
-        </div>
+  <div class="band-img-box">
+    <img src=`../public/images/${name}m.webp` alt="" class="band-img-m" />
+    <img src=`../public/images/${name}.webp` alt="" class="band-img" />
+
+    <h1 class="norm-txt">{name}</h1>
+    <div class="top-img">
+      <h1 class="mobile-txt">{name}</h1>
+      <RightNavigation
+        color={colors[topic]}
+        currentPage={currentPage}
+        topic={topic}
+      />
     </div>
+  </div>
 </div>

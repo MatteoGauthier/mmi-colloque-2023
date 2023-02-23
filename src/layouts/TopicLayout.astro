@@ -26,7 +26,11 @@ import { colors } from 'src/lib/content'
   </head>
   <Header />
   <body>
-    <Band />
+    <Band
+    color={colors[topic]}
+    currentPage={currentPage}
+    topic={topic}
+    name={name} />
     </div>
 
     <div class="main mx-14 mt-12 flex justify-between">
