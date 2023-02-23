@@ -1,10 +1,13 @@
 ---
-import AlternativeLayout from "@/layouts/AlternativeLayout.astro"
+import AlternativeLayout from "@/layouts/AlternativeLayout.astro";
 
-const [page] = await Astro.glob("../content/page/legal.md")
-const { Content, frontmatter } = page
+const [page] = await Astro.glob("../content/page/legal.md");
+const { Content, frontmatter } = page;
 ---
 
-<AlternativeLayout title={frontmatter.title} backgroundImage={"/icons/chair.svg/"}>
-  <Content />
+<AlternativeLayout
+    title={frontmatter.title}
+    backgroundImage={"/icons/chair.svg/"}
+>
+    <Content />
 </AlternativeLayout>
