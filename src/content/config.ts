@@ -39,18 +39,4 @@ const topic = defineCollection({
     }),
 });
 
-const page = defineCollection({
-    schema: z.object({
-        title: z.string(),
-        programme: z
-            .object({
-                title: z.string(),
-                edition: z.string(),
-                firstContent: z.string(),
-                titleRight: z.string(),
-            })
-            .optional(),
-    }),
-});
-
-export const collections = { topic, page };
+export const collections = { topic };

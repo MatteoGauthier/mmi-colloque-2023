@@ -2,8 +2,6 @@
 title: Mentions Légales
 ---
 
-# Legal Markdown
-
 ## Intro
 
 This gem will parse YAML Front Matter of Markdown and other Text Based Documents. **It will work with more than only markdown**.
