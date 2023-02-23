@@ -1,3 +1,8 @@
-<h1 class="text-title font-display font-semibold leading-none">
+---
+import clsx from 'clsx'
+const { class: className } = Astro.props
+---
+
+<h1 class={clsx("text-title font-display font-semibold leading-none", className)}>
   <slot />
 </h1>

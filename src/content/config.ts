@@ -40,10 +40,4 @@ const topic = defineCollection({
   }),
 })
 
-const page = defineCollection({
-  schema: z.object({
-    title: z.string(),
-  }),
-})
-
-export const collections = { topic, page }
+export const collections = { topic }
