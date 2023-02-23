@@ -1,9 +1,9 @@
 ---
-import Header from '@/components/Header.astro';
-import Footer from '@/components/Footer.astro';
-import Head from "@/components/Head.astro";
-import RightNavigation from "@/components/RightNavigation.astro";
-import Band from "@/components/Band.astro";
+import Header from '@/components/Header.astro'
+import Footer from '@/components/Footer.astro'
+import Head from '@/components/Head.astro'
+import RightNavigation from '@/components/RightNavigation.astro'
+import Band from '@/components/Band.astro'
 export interface Props {
   name: string
   topic: string
@@ -26,23 +26,18 @@ import { colors } from 'src/lib/content'
   </head>
   <Header />
   <body>
-    <Band
-    color={colors[topic]}
-    currentPage={currentPage}
-    topic={topic}
-    name={name} />
-    </div>
-
-    <div class="main mx-14 mt-12 md:flex justify-between">
-      <div class="max-w-4xl">
-        <slot />
-      </div>
-      <RightNavigation
-        color={colors[topic]}
-        currentPage={currentPage}
-        topic={topic}
-      />
-    </div>
-    <Footer />
+    <Band currentPage={currentPage} topic={topic} name={name} />
   </body>
+
+  <div class="main mx-14 mt-12 md:flex justify-between">
+    <div class="max-w-4xl">
+      <slot />
+    </div>
+    <RightNavigation
+      color={colors[topic]}
+      currentPage={currentPage}
+      topic={topic}
+    />
+  </div>
+  <Footer />
 </html>

@@ -1,15 +1,21 @@
 ---
-
 ---
 
+<header>
+  <div class="header-box">
+    <a href="/">
+      <img src="/images/logo.webp" alt="TODO" />
+    </a>
+    <a href="/colloques" class="header-a">Colloque MMI</a>
+    <a href="/about" class="header-a">À propos</a>
+  </div>
+</header>
 <style>
-    
-body{
+  body {
     margin: 0px;
-}
+  }
 
-
-.header-box{
+  .header-box {
     background-color: black;
     margin: 0px;
     color: white;
@@ -21,47 +27,36 @@ body{
     padding-left: 4vw;
     padding-right: 6.9vw;
     align-items: center;
-}
-.header-box img{
+  }
+  .header-box img {
     width: 57px;
     height: 57px;
+  }
 
-}
-
-.header-a{
+  .header-a {
     color: white;
     font-family: 'Montserrat';
     font-size: 16px;
     text-decoration: none;
-}
-.header-a:hover{
-
+  }
+  .header-a:hover {
     text-decoration: underline;
-}
+  }
 
-@media screen and (max-width: 768px) {
-    .header-box{
-        width: 53vw;
-        height: 160px;
-        min-width: 260px;
-        border-bottom-right-radius: 200px;
-        position: absolute;
-        z-index: 10;
+  @media screen and (max-width: 768px) {
+    .header-box {
+      width: 53vw;
+      height: 160px;
+      min-width: 260px;
+      border-bottom-right-radius: 200px;
+      position: absolute;
+      z-index: 10;
     }
-    .header-box img{
-        margin-left: 17.8vw;
+    .header-box img {
+      margin-left: 17.8vw;
     }
-    .header-a{
-        display: none;
+    .header-a {
+      display: none;
     }
-}
+  }
 </style>
-
-<header>
-    <div class="header-box">
-
-        <img src="images/logo.webp" alt="">
-        <a href="" class="header-a"><p>Colloques MMI</p></a>
-        <a href="" class="header-a"><p>À propos</p></a>
-    </div>
-</header>

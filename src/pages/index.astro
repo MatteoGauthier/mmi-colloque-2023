@@ -1,3 +1,44 @@
-<div>
-  hey
-</div>
+---
+import Head from '@/components/Head.astro'
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO</title>
+    <Head />
+  </head>
+  <body>
+    <main class="mx-14">
+      <section class="flex flex-col items-start">
+        <span
+          class="font-display leading-none text-[30px] block font-semibold mb-4"
+          >Édition 2023</span
+        >
+        <h1
+          class="font-display leading-none text-[50px] font-semibold uppercase mb-8"
+        >
+          Handicap et Numérique
+        </h1>
+        <p class="font-sans leading-tight">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation
+        </p>
+        <a
+          href="/programme"
+          class="item font-semibold border-[3px] border-black rounded-[10px] font-display text-[30px] px-5 py-2"
+          >Programme +</a
+        >
+      </section>
+    </main>
+    <style>
+      .item {
+        box-shadow: 0px 4px 4px 0px #00000040;
+      }
+    </style>
+  </body>
+</html>
