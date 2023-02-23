@@ -1,23 +1,32 @@
 ---
-import { getCollection } from "astro:content"
-import TopicLayout from "@/layouts/TopicLayout.astro"
-import H1 from "@/components/H1.astro"
+import { CollectionEntry, getCollection } from "astro:content";
+import TopicLayout from "@/layouts/TopicLayout.astro";
+import H1 from "@/components/H1.astro";
 export async function getStaticPaths() {
-  const topics = await getCollection("topic")
+  const topics = await getCollection("topic");
   return topics.map((p) => ({
     params: { slug: p.slug },
     props: p,
-  }))
+  }));
 }
-const topic = Astro.props
+const topic = Astro.props as CollectionEntry<"topic">;
+
+import { colors } from "src/lib/content";
 ---
 
 <TopicLayout name={topic.data.name} topic={topic.slug} currentPage={"speakers"}>
-  <H1>Speakers</H1>
-  <pre>
-    
-    {
-      JSON.stringify(topic, null, 2)
-    }
-  </pre>
+  {
+    topic.data.speakers.map((speaker) => (
+      <div class="flex md:flex-row flex-col-reverse mb-[60px]">
+        <div style={{backgroundColor: colors[topic.slug]}} class="sm:w-[200px] w-[180px] h-[180px] sm:h-[200px] rounded-[20px] border-[3px] border-black flex justify-center items-center p-[20px] mr-[50px]">
+          <img src={speaker.avatarUrl} class="bg-white w-full h-full rounded-[10px] border-[2px] border-black flex justify-center items-center" />
+        </div>
+
+        <div class="h-auto flex flex-col">
+          <h2 class="font-display md:text-[50px] text-[40px]">{speaker.name}</h2>
+          <p class="font-sans md:text-[30px] text-[20px] mb-2">{speaker.description}</p>
+        </div>
+      </div>
+    ))
+  }
 </TopicLayout>

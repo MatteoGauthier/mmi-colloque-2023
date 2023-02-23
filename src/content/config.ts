@@ -8,6 +8,8 @@ const topic = defineCollection({
     speakers: z.array(
       z.object({
         name: z.string(),
+        description : z.string(),
+        avatarUrl: z.string(),
       })
     ),
 
