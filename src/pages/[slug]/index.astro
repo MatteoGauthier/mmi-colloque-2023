@@ -13,7 +13,7 @@ const topic = Astro.props as CollectionEntry<'topic'>;
 ---
 
 <TopicLayout name={topic.data.name} topic={topic.slug} currentPage={'info'}>
-  <div class="max-w-4xl">
+  <div class="max-w-4xl mr-14">
     <H1>
       {topic.data.information.title}
     </H1>
