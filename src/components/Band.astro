@@ -3,7 +3,10 @@ export interface Props {
   name: string
   topic: string
   currentPage: string
+<<<<<<< HEAD
   txtc: string
+=======
+>>>>>>> 4e9fa2b4f55a163b8f00709eae046a11fd37a69a
 }
 
 const { name, topic, currentPage } = Astro.props
@@ -83,9 +86,14 @@ import { colors } from 'src/lib/content'
     <h1 class="norm-txt">{name}</h1>
     <div class="top-img">
       <h1 class="mobile-txt">{name}</h1>
+<<<<<<< HEAD
       <RightNavigation 
         color="Black"
         txtc="White"
+=======
+      <RightNavigation
+        color={colors[topic]}
+>>>>>>> 4e9fa2b4f55a163b8f00709eae046a11fd37a69a
         currentPage={currentPage}
         topic={topic}
       />
