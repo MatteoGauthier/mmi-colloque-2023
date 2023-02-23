@@ -10,10 +10,10 @@ console.log(page);
 ---
 
 <PageLayout title={remarkPluginFrontmatter.title}>
-    <div class="programme-container flex w-full">
-        <div class="infos w-3/6">
-            <h3>{page.data.programme.edition}</h3>
-            <h1>{page.data.programme.title}</h1>
+    <div class="programme-container flex w-full mt-24">
+        <div class="infos w-3/6 mt-28">
+            <h3 class="font-display text-3xl">{page.data.programme.edition}</h3>
+            <h1 class="text-title">{page.data.programme.title}</h1>
             <p>{page.data.programme.firstContent}</p>
         </div>
         <div class="programme w-1/2">

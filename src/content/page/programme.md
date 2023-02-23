@@ -1,6 +1,5 @@
 ---
-title: test
-programme:
+title: Programme de l'éditiion 2023
     edition: Édition 2023
     title: Handicap et Numérique
     firstContent: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
