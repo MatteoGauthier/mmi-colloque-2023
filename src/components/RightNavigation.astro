@@ -3,11 +3,12 @@ export interface Props {
   color: string
   currentPage: string
   topic: string
+  txtc: string
 }
 
 import clsx from 'clsx'
 
-const { color, currentPage, topic } = Astro.props
+const { color, currentPage, topic,txtc } = Astro.props
 
 const links = [
   {
@@ -45,8 +46,9 @@ const links = [
         href={n.href}
         class={clsx(
           'item font-semibold text-center flex items-center rounded-[10px] border-black border-2 font-display justify-center py-3 text-[25px] uppercase  w-[64.8vw] md:w-56',
-          currentPage == n.page && 'active'
-        )}
+          currentPage == n.page && 'active', txtc == 'White' && currentPage == n.page &&  'text-white'
+        )} 
+
       >
         {n.name}
       </a>
@@ -62,5 +64,13 @@ const links = [
 
   .active {
     background-color: var(--activeColor);
+    
   }
+  @media screen and (max-width: 768px) {
+    .active {
+      
+    
+  }
+}
 </style>
+
