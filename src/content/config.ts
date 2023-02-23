@@ -14,6 +14,7 @@ const topic = defineCollection({
     live: z.object({
       url: z.string(),
       title: z.string(),
+      description: z.string(),
     }),
     poster: z.object({
       title: z.string(),

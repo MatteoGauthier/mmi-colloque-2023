@@ -9,15 +9,25 @@ export async function getStaticPaths() {
     props: p,
   }));
 }
-const topic = Astro.props;
+const topic = Astro.props ;
 ---
+<style>
+  .title-live{
+}
+.live-window{
+    scroll-behavior: none;
+     height: calc(67.8vw * 0.473);
+     width:67.8vw;
+}
+.live-p{
+    font-size: 20px;
+    margin-top: 45px;
+    margin-bottom: 100px;
+}
+</style>
 
 <TopicLayout name={topic.data.name} topic={topic.slug} currentPage={'live'}>
-  <H1>Live</H1>
-  <pre>
-    
-    {
-      JSON.stringify(topic, null, 2)
-    }
-  </pre>
+  <H1 class="title.live">{topic.data.live.title}</H1>
+  <p class="live-p">{topic.data.live.description}</p>
+  <iframe src="https://player.twitch.tv/?channel=phoenixsclive&parent=http://127.0.0.1:5500/live/live.html" class="live-window"></iframe>
 </TopicLayout>
