@@ -25,11 +25,6 @@ body{
     margin: 0px;
 }
 
-
-footer .logo{
-    width: 75px;
-    margin-left: 4.5vw;
-}
 footer h3{
     font-family: 'Hind';
     font-size: 21px;
@@ -38,21 +33,16 @@ footer h3{
 
 .soc-foot{
     width: 65px;
-    margin-right: 4vw;
-}
-.bloc-contenu{
-    margin-bottom: 35px;
-}
-.bloc-contenu *{
-    margin-bottom: 35px;
-    margin-bottom: 10px;
-}
-.soc-img{
-    display: flex;
+    margin-right: 2.5vw;
 }
 
-.legal-footer{
-    margin-left: 4.5vw;
+.soc-foot-1{
+    width: 52px;
+    margin-top: 0.5vw;
+}
+
+.soc-img{
+    display: flex;
 }
 
 @media screen and (max-width: 600px) {
@@ -82,45 +72,32 @@ footer h3{
     }
 
     .colonne-footer-2 {
-      margin-top: a
+      margin-top: 5rem;
+    }
+
+    .mtop-6 {
+      margin-top: 1.5rem;
     }
 }
 
 </style>
 
-<footer class="flex flex-col">
-  <img src="images/logo.webp" alt="" class="logo">
-  <section class="contenu-footer-1 flex place-content-between mx-16">
-    <div class="flex flex-col gap-5">
-        <div class="bloc-contenu">
-            <h3 class="font-bold">Accueil</h3>
-        </div>
-        <div class="bloc-contenu">
-            <h3 class="font-bold">Colloques MMI</h3>
-            <a href="" class="footer-a"><p>Edition 2023</p></a>
-            <a href="" class="footer-a"><p>Edition 2022</p></a>
-        </div>
-        <div class="bloc-contenu font-bold">
-            <h3>Programme</h3>
-        </div>
-    </div>
-      <div class="colonne-footer flex flex-col gap-6">
-        <div class="bloc-contenu">
-            <h3 class="font-bold">PUBLIC</h3>
-            <a href="" class="footer-a"><p>Informations</p></a>
-            <a href="" class="footer-a"><p>Intervenants</p></a>
-            <a href="" class="footer-a"><p>Poster</p></a>
-            <a href="" class="footer-a"><p>Ouvrage</p></a>
-            <a href="" class="footer-a"><p>Live</p></a>
-        </div>
-        <div class="bloc-contenu">
-            <h3 class="font-bold">DISPOSITIFS INNOVANTS</h3>
-            <a href="" class="footer-a"><p>Informations</p></a>
-            <a href="" class="footer-a"><p>Intervenants</p></a>
-            <a href="" class="footer-a"><p>Poster</p></a>
-            <a href="" class="footer-a"><p>Ouvrage</p></a>
-            <a href="" class="footer-a"><p>Live</p></a>
-        </div>
+<footer>
+  <img src="images/logo.webp" alt="" class="logo mx-16 mb-16 w-20">
+  <section class="flex flex-col">
+    <section class="contenu-footer-1 flex place-content-between mx-16">
+      <div class="flex flex-col gap-6">
+          <div class="bloc-contenu-1">
+              <h3 class="font-bold">Accueil</h3>
+          </div>
+          <div class="bloc-contenu-1">
+              <h3 class="font-bold">Colloques MMI</h3>
+              <a href="" class="footer-a"><p>Edition 2023</p></a>
+              <a href="" class="footer-a"><p>Edition 2022</p></a>
+          </div>
+          <div class="bloc-contenu-1 font-bold">
+              <h3>Programme</h3>
+          </div>
       </div>
       <div class="colonne-footer-2 flex flex-col gap-6" >
         <div class="bloc-contenu">
@@ -140,31 +117,50 @@ footer h3{
             <a href="" class="footer-a"><p>Live</p></a>
         </div>
       </div>
-    <div class="colonne-footer flex flex-col gap-6">
-      <div class="bloc-contenu">
-          <h3 class="font-bold">NOUS CONTACTER</h3>
-          <a href="" class="footer-a"><p>1 Rue Jacques Ellul, 33800  BORDEAUX</p></a>
-          <a href="" class="footer-a"><p>05 57 12 20 40</p></a>
-          <a href="" class="footer-a"><p>mmibordeaux@mmibordeaux.com</p></a>
-          <a href="" class="footer-a"><p>colloquemmi@mmibordeaux.com</p></a>
-      </div>
-      <div class="bloc-contenu">
-          <h3 class="font-bold">À PROPOS</h3>
-          <a href="" class="footer-a"><p>Les intervenants</p></a>
-          <a href="" class="footer-a"><p>Les élèves MMI</p></a>
-          <a href="" class="footer-a"><p>Les professeurs</p></a>
-      </div>
-      <div class="bloc-contenu-soc">
-          <h3 class="font-bold">NOS RÉSEAUX</h3>
-          <div class="soc-img">
-          <a href=""><img src="images/twitch.webp" alt="" class="soc-foot"></a>
-          <a href=""><img src="images/insta.webp" alt="" class="soc-foot"></a>
+        <div class="flex flex-col gap-6 mtop-6">
+          <div class="bloc-contenu">
+              <h3 class="font-bold">PUBLIC</h3>
+              <a href="" class="footer-a"><p>Informations</p></a>
+              <a href="" class="footer-a"><p>Intervenants</p></a>
+              <a href="" class="footer-a"><p>Poster</p></a>
+              <a href="" class="footer-a"><p>Ouvrage</p></a>
+              <a href="" class="footer-a"><p>Live</p></a>
+          </div>
+          <div class="bloc-contenu">
+              <h3 class="font-bold">DISPOSITIFS INNOVANTS</h3>
+              <a href="" class="footer-a"><p>Informations</p></a>
+              <a href="" class="footer-a"><p>Intervenants</p></a>
+              <a href="" class="footer-a"><p>Poster</p></a>
+              <a href="" class="footer-a"><p>Ouvrage</p></a>
+              <a href="" class="footer-a"><p>Live</p></a>
+          </div>
+        </div>
+      <div class="colonne-footer-2 flex flex-col gap-6">
+        <div class="bloc-contenu">
+            <h3 class="font-bold">NOUS CONTACTER</h3>
+            <a href="" class="footer-a"><p>1 Rue Jacques Ellul, 33800  BORDEAUX</p></a>
+            <a href="" class="footer-a"><p>05 57 12 20 40</p></a>
+            <a href="" class="footer-a"><p>mmibordeaux@mmibordeaux.com</p></a>
+            <a href="" class="footer-a"><p>colloquemmi@mmibordeaux.com</p></a>
+        </div>
+        <div class="bloc-contenu">
+            <h3 class="font-bold">À PROPOS</h3>
+            <a href="" class="footer-a"><p>Les intervenants</p></a>
+            <a href="" class="footer-a"><p>Les élèves MMI</p></a>
+            <a href="" class="footer-a"><p>Les professeurs</p></a>
+        </div>
+        <div class="bloc-contenu-soc">
+            <h3 class="font-bold">NOS RÉSEAUX</h3>
+            <div class="soc-img">
+            <a href=""><img src="images/twitch.webp" alt="" class="soc-foot"></a>
+            <a href=""><img src="images/insta.webp" alt="" class="soc-foot-1"></a>
+        </div>
       </div>
     </div>
-  </div>
-  </section>
-  <section class="legal-footer flex gap-12 py-8">
-      <a href="" class="footer-a"><p>Mentions légales</p></a>
-      <a href="" class="footer-a"><p>À propos</p></a>
+    </section>
+    <section class="legal-footer flex gap-12 py-8 mx-16">
+        <a href="" class="footer-a"><p>Mentions légales</p></a>
+        <a href="" class="footer-a"><p>À propos</p></a>
+    </section>
   </section>
 </footer>
