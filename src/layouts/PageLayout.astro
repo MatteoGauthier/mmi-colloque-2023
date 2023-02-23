@@ -1,21 +1,39 @@
 ---
-import Head from "@/components/Head.astro";
-import Header from "@/components/Header.astro";
+import Head from '@/components/Head.astro'
+import Header from '@/components/Header.astro'
+
+export interface Props {
+  title: string
+  backgroundImage?: string
+}
+
+const { title, backgroundImage } = Astro.props
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <title>{"todo"}</title>
-        <Head />
-    </head>
-    <Header />
-    <body>
-        <main class="mx-14">
-            <slot />
-        </main>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{'todo'}</title>
+    <Head />
+  </head>
+
+  <body
+    style={{
+      backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined,
+    }}
+  >
+    <main class="">
+      <slot />
+    </main>
+    <style define:vars={{ backgroundImage }}>
+      body {
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        background-attachment: fixed;
+      }
+    </style>
+  </body>
 </html>
