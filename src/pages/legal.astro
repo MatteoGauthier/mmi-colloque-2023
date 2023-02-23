@@ -7,6 +7,6 @@ const page = await getEntryBySlug("page", "legal")
 const { Content, remarkPluginFrontmatter } = await page.render()
 ---
 
-<AlternativeLayout title={remarkPluginFrontmatter.title}>
+<AlternativeLayout title={remarkPluginFrontmatter.title} backgroundImage={"/icons/chair.svg/"}>
   <Content />
 </AlternativeLayout>
