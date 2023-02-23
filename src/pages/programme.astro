@@ -1,0 +1,30 @@
+---
+import Header from '@/components/Header.astro'
+import AlternativeLayout from '@/layouts/AlternativeLayout.astro'
+import PageLayout from '@/layouts/PageLayout.astro'
+import { getEntryBySlug } from 'astro:content'
+const [page] = await Astro.glob('../content/page/programme.md')
+const { Content, frontmatter } = page
+---
+
+<PageLayout backgroundImage={'/icons/chair-fast.svg'}>
+  <div class="programme-container flex w-full h-screen">
+    <div class="infos w-3/6">
+      <Header />
+      <div class="text-infos ml-14">
+        <h3 class="text-3xl font-display font-bold mt-28">
+          {frontmatter.edition}
+        </h3>
+        <h1 class="text-title mt-4 mb-12">
+          {frontmatter.title}
+        </h1>
+        <p>{frontmatter.firstContent}</p>
+      </div>
+    </div>
+    <div class="programme w-1/2 bg-slate-200 pt-16">
+      <h2 class="text-center text-4xl font-display font-bold">
+        {frontmatter.titleRight}
+      </h2>
+    </div>
+  </div>
+</PageLayout>

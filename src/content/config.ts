@@ -1,4 +1,4 @@
-import { defineCollection, z } from "astro:content"
+import { defineCollection, z } from 'astro:content'
 
 const topic = defineCollection({
   schema: z.object({
@@ -8,6 +8,8 @@ const topic = defineCollection({
     speakers: z.array(
       z.object({
         name: z.string(),
+        description: z.string(),
+        avatarUrl: z.string(),
       })
     ),
 

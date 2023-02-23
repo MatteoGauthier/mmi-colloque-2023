@@ -2,8 +2,13 @@
 name: Dispositifs innovants
 description: description Dispositifs innovants
 speakers:
-    - name: David
+    - name: Marlene
+      description: hey
+      avatarUrl: https://via.placeholder.com/150
     - name: jack
+      description: hey
+      avatarUrl: https://via.placeholder.com/150
+      
 live:
     url: https://www.youtube.com/watch?v=QH2-TGUlwu4
     title: Dispositifs innovants Live Colloque 2023

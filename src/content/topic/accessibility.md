@@ -3,7 +3,12 @@ name: Accessibilité
 description: description Accessibilité
 speakers:
     - name: Marlene
+      description: hey
+      avatarUrl: https://via.placeholder.com/150
     - name: jack
+      description: hey
+      avatarUrl: https://via.placeholder.com/150
+
 
 live:
     url: https://www.youtube.com/watch?v=QH2-TGUlwu4
