@@ -36,15 +36,6 @@ footer h3{
     font-weight: bold;
 }
 
-.contenu-footer-1{
-    margin-top: 76px ;
-    display: flex;
-    flex-direction: row;
-    margin-left: 4.5vw;
-    width: calc(100vw - 9vw);
-    justify-content: space-between;
-}
-
 .soc-foot{
     width: 65px;
     margin-right: 4vw;
@@ -61,10 +52,7 @@ footer h3{
 }
 
 .legal-footer{
-    display: flex;
     margin-left: 4.5vw;
-    width: 19vw;
-    justify-content: space-between;
 }
 
 @media screen and (max-width: 600px) {
@@ -80,117 +68,103 @@ footer h3{
     }
 }
 
-@media screen and (max-width: 960px) {
-    .mobile-display-n{
+@media screen and (max-width: 1000px) {
+    .contenu-footer-1 {
+      flex-direction: column;
     }
-    .contenu-footer-1{
-        justify-content: space-evenly;
+
+    .colonne-footer {
+      margin-top: 5rem;
+    }
+
+    .legal-footer{
+      margin-top: 3rem;
+    }
+
+    .colonne-footer-2 {
+      margin-top: a
     }
 }
+
 </style>
 
-  <footer>
-    <img src="images/logo.webp" alt="" class="logo">
-    
-    <div class="contenu-footer-1">
-    <div class="colonne-footer">
-    
+<footer class="flex flex-col">
+  <img src="images/logo.webp" alt="" class="logo">
+  <section class="contenu-footer-1 flex place-content-between mx-16">
+    <div class="flex flex-col gap-5">
         <div class="bloc-contenu">
-            <h3>Accueil</h3>
-            
+            <h3 class="font-bold">Accueil</h3>
         </div>
         <div class="bloc-contenu">
-            <h3>Colloques MMI</h3>
+            <h3 class="font-bold">Colloques MMI</h3>
             <a href="" class="footer-a"><p>Edition 2023</p></a>
             <a href="" class="footer-a"><p>Edition 2022</p></a>
-            
         </div>
-        <div class="bloc-contenu">
+        <div class="bloc-contenu font-bold">
             <h3>Programme</h3>
-            
         </div>
-    
     </div>
-    
-    <div class="colonne-footer mobile-display-n">
-    
+      <div class="colonne-footer flex flex-col gap-6">
         <div class="bloc-contenu">
-            <h3>PUBLIC</h3>
+            <h3 class="font-bold">PUBLIC</h3>
             <a href="" class="footer-a"><p>Informations</p></a>
             <a href="" class="footer-a"><p>Intervenants</p></a>
             <a href="" class="footer-a"><p>Poster</p></a>
             <a href="" class="footer-a"><p>Ouvrage</p></a>
             <a href="" class="footer-a"><p>Live</p></a>
-            
         </div>
         <div class="bloc-contenu">
-            <h3>DISPOSITIFS INNOVANTS</h3>
+            <h3 class="font-bold">DISPOSITIFS INNOVANTS</h3>
             <a href="" class="footer-a"><p>Informations</p></a>
             <a href="" class="footer-a"><p>Intervenants</p></a>
             <a href="" class="footer-a"><p>Poster</p></a>
             <a href="" class="footer-a"><p>Ouvrage</p></a>
             <a href="" class="footer-a"><p>Live</p></a>
-            
-            
         </div>
-    
-    </div>
-    
-    <div class="colonne-footer mobile-display-n" >
-    
+      </div>
+      <div class="colonne-footer-2 flex flex-col gap-6" >
         <div class="bloc-contenu">
-            <h3>ACCESSIBILITÉ</h3>
+            <h3 class="font-bold">ACCESSIBILITÉ</h3>
             <a href="" class="footer-a"><p>Informations</p></a>
             <a href="" class="footer-a"><p>Intervenants</p></a>
             <a href="" class="footer-a"><p>Poster</p></a>
             <a href="" class="footer-a"><p>Ouvrage</p></a>
             <a href="" class="footer-a"><p>Live</p></a>
-            
         </div>
         <div class="bloc-contenu">
-            <h3>INCLUSIVITÉ</h3>
+            <h3 class="font-bold">INCLUSIVITÉ</h3>
             <a href="" class="footer-a"><p>Informations</p></a>
             <a href="" class="footer-a"><p>Intervenants</p></a>
             <a href="" class="footer-a"><p>Poster</p></a>
             <a href="" class="footer-a"><p>Ouvrage</p></a>
             <a href="" class="footer-a"><p>Live</p></a>
-            
-            
         </div>
+      </div>
+    <div class="colonne-footer flex flex-col gap-6">
+      <div class="bloc-contenu">
+          <h3 class="font-bold">NOUS CONTACTER</h3>
+          <a href="" class="footer-a"><p>1 Rue Jacques Ellul, 33800  BORDEAUX</p></a>
+          <a href="" class="footer-a"><p>05 57 12 20 40</p></a>
+          <a href="" class="footer-a"><p>mmibordeaux@mmibordeaux.com</p></a>
+          <a href="" class="footer-a"><p>colloquemmi@mmibordeaux.com</p></a>
+      </div>
+      <div class="bloc-contenu">
+          <h3 class="font-bold">À PROPOS</h3>
+          <a href="" class="footer-a"><p>Les intervenants</p></a>
+          <a href="" class="footer-a"><p>Les élèves MMI</p></a>
+          <a href="" class="footer-a"><p>Les professeurs</p></a>
+      </div>
+      <div class="bloc-contenu-soc">
+          <h3 class="font-bold">NOS RÉSEAUX</h3>
+          <div class="soc-img">
+          <a href=""><img src="images/twitch.webp" alt="" class="soc-foot"></a>
+          <a href=""><img src="images/insta.webp" alt="" class="soc-foot"></a>
+      </div>
     </div>
-    
-    <div class="colonne-footer">
-    
-        <div class="bloc-contenu">
-            <h3>NOUS CONTACTER</h3>
-            <a href="" class="footer-a"><p>1 Rue Jacques Ellul, 33800  BORDEAUX</p></a>
-            <a href="" class="footer-a"><p>05 57 12 20 40</p></a>
-            <a href="" class="footer-a"><p>mmibordeaux@mmibordeaux.com</p></a>
-            <a href="" class="footer-a"><p>colloquemmi@mmibordeaux.com</p></a>
-            
-        </div>
-        <div class="bloc-contenu">
-            <h3>À PROPOS</h3>
-            <a href="" class="footer-a"><p>Les intervenants</p></a>
-            <a href="" class="footer-a"><p>Les élèves MMI</p></a>
-            <a href="" class="footer-a"><p>Les professeurs</p></a>
-            
-            
-        </div>
-        <div class="bloc-contenu-soc">
-            <h3>NOS RÉSEAUX</h3>
-            <div class="soc-img">
-            <a href=""><img src="images/twitch.webp" alt="" class="soc-foot"></a>
-            <a href=""><img src="images/insta.webp" alt="" class="soc-foot"></a>
-        </div>
-            
-        </div>
-    
-    </div>
-    </div>
-    <div class="legal-footer">
-    
-        <a href="" class="footer-a"><p>Mentions légales</p></a>
-        <a href="" class="footer-a"><p>À propos</p></a>
-    </div>
-        </footer>
+  </div>
+  </section>
+  <section class="legal-footer flex gap-12 py-8">
+      <a href="" class="footer-a"><p>Mentions légales</p></a>
+      <a href="" class="footer-a"><p>À propos</p></a>
+  </section>
+</footer>
