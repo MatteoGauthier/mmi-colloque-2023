@@ -1,74 +1,32 @@
 ---
-import { getCollection } from "astro:content"
-import TopicLayout from "@/layouts/TopicLayout.astro"
-import H1 from "@/components/H1.astro"
+import { CollectionEntry, getCollection } from "astro:content";
+import TopicLayout from "@/layouts/TopicLayout.astro";
+import H1 from "@/components/H1.astro";
 export async function getStaticPaths() {
-  const topics = await getCollection("topic")
+  const topics = await getCollection("topic");
   return topics.map((p) => ({
     params: { slug: p.slug },
     props: p,
-  }))
+  }));
 }
-const topic = Astro.props
+const topic = Astro.props as CollectionEntry<"topic">;
+
+import { colors } from "src/lib/content";
 ---
 
 <TopicLayout name={topic.data.name} topic={topic.slug} currentPage={"speakers"}>
+  {
+    topic.data.speakers.map((speaker) => (
+      <div class="flex">
+        <div style={{backgroundColor: colors[topic.slug]}} class="w-[200px] h-[200px] rounded-[20px] border-[3px] border-black flex justify-center items-center p-[20px] mr-[50px] ml-[145px] mb-[60px]">
+          <img src={speaker.avatarUrl} class="bg-white w-full h-full rounded-[10px] border-[2px] border-black overflow-hidden flex justify-center items-center" />
+        </div>
 
-  <!-- todo: changer la couleur du orange -->
-  <div class="flex">
-
-    <div class="bg-orange-500 w-[200px] h-[200px] rounded-[20px] border-[3px] border-black flex justify-center items-center p-[20px] mr-[50px] ml-[145px] mb-[60px]">
-      <div class="bg-white w-full h-full rounded-[10px] border-[2px] border-black overflow-hidden flex justify-center items-center"></div>
-    </div>
-
-    <div class="h-auto flex flex-col">
-      <h2 class="text-[50px]">NOM Prénom</h2>
-      <p class="text-[30px]">profession de l'invité</p>
-    </div>
-
-  </div>
-  <div class="flex">
-
-    <div class="bg-orange-500 w-[200px] h-[200px] rounded-[20px] border-[3px] border-black flex justify-center items-center p-[20px] mr-[50px] ml-[145px] mb-[60px]">
-      <div class="bg-white w-full h-full rounded-[10px] border-[2px] border-black overflow-hidden flex justify-center items-center"></div>
-    </div>
-
-    <div class="h-auto flex flex-col">
-      <h2 class="text-[50px]">NOM Prénom</h2>
-      <p class="text-[30px]">profession de l'invité</p>
-    </div>
-
-  </div>
-  <div class="flex">
-
-    <div class="bg-orange-500 w-[200px] h-[200px] rounded-[20px] border-[3px] border-black flex justify-center items-center p-[20px] mr-[50px] ml-[145px] mb-[60px]">
-      <div class="bg-white w-full h-full rounded-[10px] border-[2px] border-black overflow-hidden flex justify-center items-center"></div>
-    </div>
-
-    <div class="h-auto flex flex-col">
-      <h2 class="text-[50px]">NOM Prénom</h2>
-      <p class="text-[30px]">profession de l'invité</p>
-    </div>
-
-  </div>
-  <div class="flex">
-
-    <div class="bg-orange-500 w-[200px] h-[200px] rounded-[20px] border-[3px] border-black flex justify-center items-center p-[20px] mr-[50px] ml-[145px] mb-[60px]">
-      <div class="bg-white w-full h-full rounded-[10px] border-[2px] border-black overflow-hidden flex justify-center items-center"></div>
-    </div>
-
-    <div class="h-auto flex flex-col">
-      <h2 class="text-[50px]">NOM Prénom</h2>
-      <p class="text-[30px]">profession de l'invité</p>
-    </div>
-
-  </div>
-
-
-
-  <pre>
-    {
-      JSON.stringify(topic, null, 2)
-    }
-  </pre>
+        <div class="h-auto flex flex-col">
+          <h2 class="text-[50px]">{speaker.name}</h2>
+          <p class="text-[30px]">{speaker.description}</p>
+        </div>
+      </div>
+    ))
+  }
 </TopicLayout>
