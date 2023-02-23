@@ -5,40 +5,37 @@ export interface Props {
   topic: string
 }
 
-import clsx from "clsx"
+import clsx from 'clsx'
 
 const { color, currentPage, topic } = Astro.props
 
 const links = [
   {
-    name: "Informations",
-    page: "info",
-    href: `/${topic}`
+    name: 'Informations',
+    page: 'info',
+    href: `/${topic}`,
   },
   {
-    name: "Intervenants",
-    page: "speakers",
-    href: `/${topic}/speakers`
+    name: 'Intervenants',
+    page: 'speakers',
+    href: `/${topic}/speakers`,
   },
   {
-    name: "Ouvrage",
-    page: "publication",
-    href: `/${topic}/publication`
+    name: 'Ouvrage',
+    page: 'publication',
+    href: `/${topic}/publication`,
   },
   {
-    name: "Poster",
-    page: "poster",
-    href: `/${topic}/poster`
+    name: 'Poster',
+    page: 'poster',
+    href: `/${topic}/poster`,
   },
   {
-    name: "Live",
-    page: "live",
-    href: `/${topic}/live`
+    name: 'Live',
+    page: 'live',
+    href: `/${topic}/live`,
   },
 ]
-
-console.log(currentPage)
-
 ---
 
 <div class="flex flex-col w-56 space-y-8">
@@ -47,8 +44,8 @@ console.log(currentPage)
       <a
         href={n.href}
         class={clsx(
-          "item font-semibold text-center flex items-center rounded-[10px] border-black border-2 font-display justify-center py-3 text-[25px] uppercase",
-          currentPage == n.page && "active"
+          'item font-semibold text-center flex items-center rounded-[10px] border-black border-2 font-display justify-center py-3 text-[25px] uppercase',
+          currentPage == n.page && 'active'
         )}
       >
         {n.name}
