@@ -1,9 +1,9 @@
 ---
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
-import Head from "@/components/Head.astro"
-import RightNavigation from "@/components/RightNavigation.astro"
-
+import Head from "@/components/Head.astro";
+import RightNavigation from "@/components/RightNavigation.astro";
+import Band from "@/components/Band.astro";
 export interface Props {
   name: string
   topic: string
@@ -31,11 +31,7 @@ const colors = {
   </head>
   <Header />
   <body>
-    <div class="band" style="right:0; display:flex; justify-content: end;">
-      <div class="band-img-box" style="width:844px; position: relative; ">
-        <img src=`../../public/images/${name}.webp` alt="" class="band-img" > 
-        <h1 style="position: absolute;   left: 50%;  top: 50%; transform: translate(-20%, -50%); font-size: 50px; font-family:'Hind'; font-weight: bold; width:500px; text-align: center;">{name}</h1>
-      </div>
+    <Band />
     </div>
     
     <div class="main mx-14 mt-12 flex justify-between">
