@@ -1,196 +1,176 @@
 ---
-
 ---
-<style>
 
-footer{
+<footer>
+  <img src="/images/logo.webp" alt="TODO" class="logo" />
+
+  <div class="contenu-footer-1">
+    <div class="colonne-footer">
+      <div class="bloc-contenu">
+        <h3>Accueil</h3>
+      </div>
+      <div class="bloc-contenu">
+        <h3>Colloques MMI</h3>
+        <a href="TODO" class="footer-a"><p>Edition 2023</p></a>
+        <a href="TODO" class="footer-a"><p>Edition 2022</p></a>
+      </div>
+      <div class="bloc-contenu">
+        <h3>Programme</h3>
+      </div>
+    </div>
+
+    <div class="colonne-footer mobile-display-n">
+      <div class="bloc-contenu">
+        <h3>PUBLIC</h3>
+        <a href="/public/" class="footer-a">Informations</a>
+        <a href="/public/speakers" class="footer-a">Intervenants</a>
+        <a href="/public/poster" class="footer-a">Poster</a>
+        <a href="/public/publication" class="footer-a">Ouvrage</a>
+        <a href="/public/live" class="footer-a">Live</a>
+      </div>
+      <div class="bloc-contenu">
+        <h3>DISPOSITIFS INNOVANTS</h3>
+        <a href="/" class="footer-a">Informations</a>
+        <a href="/device/speakers" class="footer-a">Intervenants</a>
+        <a href="/device/poster" class="footer-a">Poster</a>
+        <a href="/device/publication" class="footer-a">Ouvrage</a>
+        <a href="/device/live" class="footer-a">Live</a>
+      </div>
+    </div>
+
+    <div class="colonne-footer mobile-display-n">
+      <div class="bloc-contenu">
+        <h3>ACCESSIBILITÉ</h3>
+        <a href="/accessibility" class="footer-a">Informations</a>
+        <a href="/accessibility/speakers" class="footer-a">Intervenants</a>
+        <a href="/accessibility/poster" class="footer-a">Poster</a>
+        <a href="/accessibility/publication" class="footer-a">Ouvrage</a>
+        <a href="/accessibility/live" class="footer-a">Live</a>
+      </div>
+      <div class="bloc-contenu">
+        <h3>INCLUSIVITÉ</h3>
+        <a href="/inclusivity" class="footer-a">Informations</a>
+        <a href="/inclusivity/speakers" class="footer-a">Intervenants</a>
+        <a href="/inclusivity/poster" class="footer-a">Poster</a>
+        <a href="/inclusivity/publication" class="footer-a">Ouvrage</a>
+        <a href="/inclusivity/live" class="footer-a">Live</a>
+      </div>
+    </div>
+
+    <div class="colonne-footer">
+      <div class="bloc-contenu">
+        <h3>NOUS CONTACTER</h3>
+        <a href="TODO" class="footer-a">1 Rue Jacques Ellul, 33800 BORDEAUX</a>
+        <a href="TODO" class="footer-a">05 57 12 20 40</a>
+        <a href="TODO" class="footer-a">mmibordeaux@mmibordeaux.com</a>
+        <a href="TODO" class="footer-a">colloquemmi@mmibordeaux.com</a>
+      </div>
+      <div class="bloc-contenu">
+        <h3>À PROPOS</h3>
+        <a href="TODO" class="footer-a">Les intervenants</a>
+        <a href="TODO" class="footer-a">Les élèves MMI</a>
+        <a href="TODO" class="footer-a">Les professeurs</a>
+      </div>
+      <div class="bloc-contenu-soc">
+        <h3>NOS RÉSEAUX</h3>
+        <div class="soc-img">
+          <a href="TODO"
+            ><img src="/images/twitch.webp" alt="TODO" class="soc-foot" /></a
+          >
+          <a href="TODO"
+            ><img src="/images/insta.webp" alt="TODO" class="soc-foot" /></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="legal-footer">
+    <a href="/legal" class="footer-a"><p>Mentions légales</p></a>
+    <a href="/about" class="footer-a"><p>À propos</p></a>
+  </div>
+</footer>
+
+<style>
+  footer {
     background-color: black;
     margin: 0px;
     color: white;
     padding-top: 30px;
     padding-bottom: 30px;
     margin-top: 150px;
-}
-.footer-a{
+  }
+  .footer-a {
     color: white;
     font-family: 'Montserrat';
     font-size: 16px;
     text-decoration: none;
-}
-.footer-a:hover{
-
+  }
+  .footer-a:hover {
     text-decoration: underline;
-}
-body{
+  }
+  body {
     margin: 0px;
-}
+  }
 
-
-footer .logo{
+  footer .logo {
     width: 75px;
     margin-left: 4.5vw;
-}
-footer h3{
+  }
+  footer h3 {
     font-family: 'Hind';
     font-size: 21px;
     font-weight: bold;
-}
+  }
 
-.contenu-footer-1{
-    margin-top: 76px ;
+  .contenu-footer-1 {
+    margin-top: 76px;
     display: flex;
     flex-direction: row;
     margin-left: 4.5vw;
     width: calc(100vw - 9vw);
     justify-content: space-between;
-}
+  }
 
-.soc-foot{
+  .soc-foot {
     width: 65px;
     margin-right: 4vw;
-}
-.bloc-contenu{
+  }
+  .bloc-contenu {
     margin-bottom: 35px;
-}
-.bloc-contenu *{
+  }
+  .bloc-contenu * {
     margin-bottom: 35px;
     margin-bottom: 10px;
-}
-.soc-img{
+  }
+  .soc-img {
     display: flex;
-}
+  }
 
-.legal-footer{
+  .legal-footer {
     display: flex;
     margin-left: 4.5vw;
     width: 19vw;
     justify-content: space-between;
-}
+  }
 
-@media screen and (max-width: 768px) {
-    .contenu-footer-1{
-        flex-direction: column;
-        
-    margin-left: 17vw;
-    width: calc(100vw - 34vw);
-    }
-    .legal-footer{
-        margin-left:17vw ;
-        width: calc(100vw - 34vw) ;
-    }
-}
+  @media screen and (max-width: 768px) {
+    .contenu-footer-1 {
+      flex-direction: column;
 
-@media screen and (max-width: 960px) {
-    .mobile-display-n{
+      margin-left: 17vw;
+      width: calc(100vw - 34vw);
     }
-    .contenu-footer-1{
-        justify-content: space-evenly;
+    .legal-footer {
+      margin-left: 17vw;
+      width: calc(100vw - 34vw);
     }
-}
+  }
+
+  @media screen and (max-width: 960px) {
+    .mobile-display-n {
+    }
+    .contenu-footer-1 {
+      justify-content: space-evenly;
+    }
+  }
 </style>
-
-  <footer>
-    <img src="images/logo.webp" alt="" class="logo">
-    
-    <div class="contenu-footer-1">
-    <div class="colonne-footer">
-    
-        <div class="bloc-contenu">
-            <h3>Accueil</h3>
-            
-        </div>
-        <div class="bloc-contenu">
-            <h3>Colloques MMI</h3>
-            <a href="" class="footer-a"><p>Edition 2023</p></a>
-            <a href="" class="footer-a"><p>Edition 2022</p></a>
-            
-        </div>
-        <div class="bloc-contenu">
-            <h3>Programme</h3>
-            
-        </div>
-    
-    </div>
-    
-    <div class="colonne-footer mobile-display-n">
-    
-        <div class="bloc-contenu">
-            <h3>PUBLIC</h3>
-            <a href="" class="footer-a"><p>Informations</p></a>
-            <a href="" class="footer-a"><p>Intervenants</p></a>
-            <a href="" class="footer-a"><p>Poster</p></a>
-            <a href="" class="footer-a"><p>Ouvrage</p></a>
-            <a href="" class="footer-a"><p>Live</p></a>
-            
-        </div>
-        <div class="bloc-contenu">
-            <h3>DISPOSITIFS INNOVANTS</h3>
-            <a href="" class="footer-a"><p>Informations</p></a>
-            <a href="" class="footer-a"><p>Intervenants</p></a>
-            <a href="" class="footer-a"><p>Poster</p></a>
-            <a href="" class="footer-a"><p>Ouvrage</p></a>
-            <a href="" class="footer-a"><p>Live</p></a>
-            
-            
-        </div>
-    
-    </div>
-    
-    <div class="colonne-footer mobile-display-n" >
-    
-        <div class="bloc-contenu">
-            <h3>ACCESSIBILITÉ</h3>
-            <a href="" class="footer-a"><p>Informations</p></a>
-            <a href="" class="footer-a"><p>Intervenants</p></a>
-            <a href="" class="footer-a"><p>Poster</p></a>
-            <a href="" class="footer-a"><p>Ouvrage</p></a>
-            <a href="" class="footer-a"><p>Live</p></a>
-            
-        </div>
-        <div class="bloc-contenu">
-            <h3>INCLUSIVITÉ</h3>
-            <a href="" class="footer-a"><p>Informations</p></a>
-            <a href="" class="footer-a"><p>Intervenants</p></a>
-            <a href="" class="footer-a"><p>Poster</p></a>
-            <a href="" class="footer-a"><p>Ouvrage</p></a>
-            <a href="" class="footer-a"><p>Live</p></a>
-            
-            
-        </div>
-    </div>
-    
-    <div class="colonne-footer">
-    
-        <div class="bloc-contenu">
-            <h3>NOUS CONTACTER</h3>
-            <a href="" class="footer-a"><p>1 Rue Jacques Ellul, 33800  BORDEAUX</p></a>
-            <a href="" class="footer-a"><p>05 57 12 20 40</p></a>
-            <a href="" class="footer-a"><p>mmibordeaux@mmibordeaux.com</p></a>
-            <a href="" class="footer-a"><p>colloquemmi@mmibordeaux.com</p></a>
-            
-        </div>
-        <div class="bloc-contenu">
-            <h3>À PROPOS</h3>
-            <a href="" class="footer-a"><p>Les intervenants</p></a>
-            <a href="" class="footer-a"><p>Les élèves MMI</p></a>
-            <a href="" class="footer-a"><p>Les professeurs</p></a>
-            
-            
-        </div>
-        <div class="bloc-contenu-soc">
-            <h3>NOS RÉSEAUX</h3>
-            <div class="soc-img">
-            <a href=""><img src="images/twitch.webp" alt="" class="soc-foot"></a>
-            <a href=""><img src="images/insta.webp" alt="" class="soc-foot"></a>
-        </div>
-            
-        </div>
-    
-    </div>
-    </div>
-    <div class="legal-footer">
-    
-        <a href="" class="footer-a"><p>Mentions légales</p></a>
-        <a href="" class="footer-a"><p>À propos</p></a>
-    </div>
-        </footer>

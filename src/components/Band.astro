@@ -21,7 +21,7 @@ import { colors } from 'src/lib/content'
     width: 844px;
     position: relative;
   }
-  
+
   .norm-txt {
     position: absolute;
     left: 50%;
@@ -33,17 +33,16 @@ import { colors } from 'src/lib/content'
     width: 500px;
     text-align: center;
   }
-  .band-img-box .top-img{
+  .band-img-box .top-img {
     position: absolute;
     left: 50%;
     top: 400px;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
     font-size: 50px;
     font-family: 'Hind';
     font-weight: bold;
     width: 500px;
     text-align: center;
-
   }
   .band-img-m,
   .mobile-txt,
@@ -61,23 +60,21 @@ import { colors } from 'src/lib/content'
     .top-img {
       display: block;
     }
-.mobile-txt{
-    
-    margin-bottom: 75px;
-    transform: translate(0, -150px);
-}
+    .mobile-txt {
+      margin-bottom: 75px;
+      transform: translate(0, -150px);
+    }
     .band-img,
     .norm-txt {
       display: none;
     }
   }
-
 </style>
 
 <div class="band">
   <div class="band-img-box">
-    <img src=`../public/images/${name}m.webp` alt="" class="band-img-m" />
-    <img src=`../public/images/${name}.webp` alt="" class="band-img" />
+    <img src={`../public/images/${name}m.webp`} alt="TODO" class="band-img-m" />
+    <img src={`../public/images/${name}.webp`} alt="TODO" class="band-img" />
 
     <h1 class="norm-txt">{name}</h1>
     <div class="top-img">
