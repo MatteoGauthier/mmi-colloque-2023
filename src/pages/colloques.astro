@@ -1,0 +1,38 @@
+---
+import Header from '@/components/Header.astro'
+import AlternativeLayout from '@/layouts/AlternativeLayout.astro'
+import PageLayout from '@/layouts/PageLayout.astro'
+import { getEntryBySlug } from 'astro:content'
+const [page] = await Astro.glob('../content/page/colloques.md')
+const { Content, frontmatter } = page
+---
+
+<PageLayout backgroundImage={'/icons/loupe.svg'}>
+  <div class="colloques-container flex w-full h-screen">
+    <div class="infos w-3/6">
+      <Header />
+      <div class="text-infos ml-14 mt-28">
+        <h1 class="text-title mt-4 mb-14">
+          {frontmatter.title}
+        </h1>
+        <p>{frontmatter.firstContent}</p>
+      </div>
+    </div>
+    <div class="colloques-edition w-1/2 bg-slate-200">
+      <div class="edition h-1/2 border-b-4 border-black">
+        <img
+          src="/public/images/home-2023.png"
+          alt="2023"
+          class="object-cover h-full w-full opacity-80 hover:opacity-100 hover:cursor-pointer transition duration-150"
+        />
+      </div>
+      <div class="edition h-1/2">
+        <img
+          src="/public/images/home-2022.png"
+          alt="2022"
+          class="object-cover h-full w-full opacity-80 hover:opacity-100 hover:cursor-pointer transition duration-150"
+        />
+      </div>
+    </div>
+  </div>
+</PageLayout>
